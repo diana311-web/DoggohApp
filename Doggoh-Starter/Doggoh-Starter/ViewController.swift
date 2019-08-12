@@ -113,12 +113,14 @@ extension ViewController:UIPickerViewDataSource{
 }
 extension ViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
+        
                 let width = (collectionView.frame.size.width - 32 - collectionView.contentInset.left - collectionView.contentInset.right) / 3
                let height: CGFloat = 48
 
                 return CGSize(width: width, height: height)
-            }
+    }
+    
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return 8
     }

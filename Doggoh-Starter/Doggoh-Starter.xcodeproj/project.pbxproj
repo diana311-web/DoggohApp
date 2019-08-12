@@ -1,0 +1,543 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E17B8DC22F9CE650072EBFF /* DogRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8DB22F9CE650072EBFF /* DogRepository.swift */; };
+		3E17B8DE22FAECB40072EBFF /* DogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8DD22FAECB40072EBFF /* DogsViewController.swift */; };
+		3E17B8E122FAF7420072EBFF /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8E022FAF7420072EBFF /* Property List.plist */; };
+		3E17B8E622FAFC8F0072EBFF /* dogs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8E522FAFC8F0072EBFF /* dogs.xcassets */; };
+		3E17B8E822FAFD070072EBFF /* Doggye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8E722FAFD070072EBFF /* Doggye.swift */; };
+		3E17B8EA22FAFEAB0072EBFF /* alldogsresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8E922FAFEAA0072EBFF /* alldogsresponse.json */; };
+		3E17B8EF22FB095B0072EBFF /* BreedsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8EE22FB095B0072EBFF /* BreedsRepository.swift */; };
+		3E17B8F222FC61940072EBFF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8F022FC61940072EBFF /* TableViewCell.swift */; };
+		3E17B8F322FC61940072EBFF /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8F122FC61940072EBFF /* TableViewCell.xib */; };
+		3E17B8F822FC730E0072EBFF /* CustomTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8F622FC730E0072EBFF /* CustomTableViewCell.swift */; };
+		3E17B8F922FC730E0072EBFF /* CustomTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8F722FC730E0072EBFF /* CustomTableViewCell.xib */; };
+		3E19400D22F9998500E79A74 /* Montserrat-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD122F4974D00CD3720 /* Montserrat-Bold.ttf */; };
+		3E19400E22F9998C00E79A74 /* Montserrat-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CCF22F4974D00CD3720 /* Montserrat-Regular.ttf */; };
+		3E19400F22F9999200E79A74 /* MontserratAlternates-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD022F4974D00CD3720 /* MontserratAlternates-Bold.ttf */; };
+		3E19401022F9999400E79A74 /* MontserratAlternates-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CCE22F4974D00CD3720 /* MontserratAlternates-Regular.ttf */; };
+		3E19401122F9999700E79A74 /* OpenSans-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD222F4975B00CD3720 /* OpenSans-Bold.ttf */; };
+		3E19401222F9999900E79A74 /* OpenSans-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD722F4975B00CD3720 /* OpenSans-BoldItalic.ttf */; };
+		3E19401322F9999C00E79A74 /* OpenSans-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CDA22F4975B00CD3720 /* OpenSans-ExtraBold.ttf */; };
+		3E19401422F9999E00E79A74 /* OpenSans-ExtraBoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD822F4975B00CD3720 /* OpenSans-ExtraBoldItalic.ttf */; };
+		3E19401522F999A100E79A74 /* OpenSans-Italic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD322F4975B00CD3720 /* OpenSans-Italic.ttf */; };
+		3E19401622F999A300E79A74 /* OpenSans-Light.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD922F4975B00CD3720 /* OpenSans-Light.ttf */; };
+		3E19401722F999AA00E79A74 /* OpenSans-LightItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD522F4975B00CD3720 /* OpenSans-LightItalic.ttf */; };
+		3E19401822F999AC00E79A74 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD422F4975B00CD3720 /* OpenSans-Regular.ttf */; };
+		3E19401922F999AF00E79A74 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD622F4975B00CD3720 /* OpenSans-Semibold.ttf */; };
+		3E19401A22F999B200E79A74 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CDB22F4975B00CD3720 /* OpenSans-SemiboldItalic.ttf */; };
+		3E4D10A42301B54500403C57 /* DogCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10A32301B54500403C57 /* DogCollectionViewCell.swift */; };
+		3E4D10A72301B55800403C57 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10A62301B55800403C57 /* PinterestLayout.swift */; };
+		3E4D10A92301B55C00403C57 /* ViewController2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10A82301B55C00403C57 /* ViewController2.swift */; };
+		3E4D10AC2301B5D900403C57 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10AB2301B5D900403C57 /* Dog.swift */; };
+		3E5CC46522FCB27F00FE0099 /* NoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC46322FCB27F00FE0099 /* NoImageTableViewCell.swift */; };
+		3E5CC46622FCB27F00FE0099 /* NoImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5CC46422FCB27F00FE0099 /* NoImageTableViewCell.xib */; };
+		3E5CC4B222FDA15B00FE0099 /* DogImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B022FDA15B00FE0099 /* DogImageTableViewCell.swift */; };
+		3E5CC4B322FDA15B00FE0099 /* DogImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B122FDA15B00FE0099 /* DogImageTableViewCell.xib */; };
+		3E5CC4B522FDA6B400FE0099 /* TableDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B422FDA6B400FE0099 /* TableDogViewController.swift */; };
+		3E5CC4B822FEF17100FE0099 /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B622FEF17100FE0099 /* CollectionViewCell.swift */; };
+		3E5CC4B922FEF17100FE0099 /* CollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B722FEF17100FE0099 /* CollectionViewCell.xib */; };
+		3E5CC4BD22FEFFE700FE0099 /* LabelStruct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC4BC22FEFFE700FE0099 /* LabelStruct.swift */; };
+		F61DD2B022F3926700B31D4A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DD2AF22F3926700B31D4A /* AppDelegate.swift */; };
+		F61DD2B222F3926700B31D4A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F61DD2B122F3926700B31D4A /* ViewController.swift */; };
+		F61DD2B522F3926700B31D4A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61DD2B322F3926700B31D4A /* Main.storyboard */; };
+		F61DD2B722F3926900B31D4A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F61DD2B622F3926900B31D4A /* Assets.xcassets */; };
+		F61DD2BA22F3926900B31D4A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F61DD2B822F3926900B31D4A /* LaunchScreen.storyboard */; };
+		F61DD2C222F392B600B31D4A /* dog_questions_multiple.json in Resources */ = {isa = PBXBuildFile; fileRef = F61DD2C122F392B600B31D4A /* dog_questions_multiple.json */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E17B8DB22F9CE650072EBFF /* DogRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogRepository.swift; sourceTree = "<group>"; };
+		3E17B8DD22FAECB40072EBFF /* DogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewController.swift; sourceTree = "<group>"; };
+		3E17B8E022FAF7420072EBFF /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
+		3E17B8E522FAFC8F0072EBFF /* dogs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = dogs.xcassets; sourceTree = "<group>"; };
+		3E17B8E722FAFD070072EBFF /* Doggye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doggye.swift; sourceTree = "<group>"; };
+		3E17B8E922FAFEAA0072EBFF /* alldogsresponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = alldogsresponse.json; path = ../../../../../../Downloads/alldogsresponse.json; sourceTree = "<group>"; };
+		3E17B8EE22FB095B0072EBFF /* BreedsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsRepository.swift; sourceTree = "<group>"; };
+		3E17B8F022FC61940072EBFF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
+		3E17B8F122FC61940072EBFF /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
+		3E17B8F622FC730E0072EBFF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
+		3E17B8F722FC730E0072EBFF /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
+		3E4D10A32301B54500403C57 /* DogCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = DogCollectionViewCell.swift; path = "Doggoh-Starter/CollectionViewExample copy/DogCollectionViewCell.swift"; sourceTree = SOURCE_ROOT; };
+		3E4D10A52301B55100403C57 /* Dogs.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Dogs.plist; sourceTree = "<group>"; };
+		3E4D10A62301B55800403C57 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		3E4D10A82301B55C00403C57 /* ViewController2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController2.swift; sourceTree = "<group>"; };
+		3E4D10AB2301B5D900403C57 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		3E4D10AD2301B5E800403C57 /* DogCollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogCollectionViewCell.xib; sourceTree = "<group>"; };
+		3E5CC46322FCB27F00FE0099 /* NoImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoImageTableViewCell.swift; sourceTree = "<group>"; };
+		3E5CC46422FCB27F00FE0099 /* NoImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoImageTableViewCell.xib; sourceTree = "<group>"; };
+		3E5CC4B022FDA15B00FE0099 /* DogImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageTableViewCell.swift; sourceTree = "<group>"; };
+		3E5CC4B122FDA15B00FE0099 /* DogImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogImageTableViewCell.xib; sourceTree = "<group>"; };
+		3E5CC4B422FDA6B400FE0099 /* TableDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDogViewController.swift; sourceTree = "<group>"; };
+		3E5CC4B622FEF17100FE0099 /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
+		3E5CC4B722FEF17100FE0099 /* CollectionViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CollectionViewCell.xib; sourceTree = "<group>"; };
+		3E5CC4BC22FEFFE700FE0099 /* LabelStruct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelStruct.swift; sourceTree = "<group>"; };
+		F61DD2AC22F3926700B31D4A /* Doggoh-Starter.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Doggoh-Starter.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F61DD2AF22F3926700B31D4A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F61DD2B122F3926700B31D4A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F61DD2B422F3926700B31D4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F61DD2B622F3926900B31D4A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F61DD2B922F3926900B31D4A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F61DD2BB22F3926900B31D4A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F61DD2C122F392B600B31D4A /* dog_questions_multiple.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dog_questions_multiple.json; sourceTree = "<group>"; };
+		F6693CCE22F4974D00CD3720 /* MontserratAlternates-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Regular.ttf"; sourceTree = "<group>"; };
+		F6693CCF22F4974D00CD3720 /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		F6693CD022F4974D00CD3720 /* MontserratAlternates-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "MontserratAlternates-Bold.ttf"; sourceTree = "<group>"; };
+		F6693CD122F4974D00CD3720 /* Montserrat-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Bold.ttf"; sourceTree = "<group>"; };
+		F6693CD222F4975B00CD3720 /* OpenSans-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Bold.ttf"; sourceTree = "<group>"; };
+		F6693CD322F4975B00CD3720 /* OpenSans-Italic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Italic.ttf"; sourceTree = "<group>"; };
+		F6693CD422F4975B00CD3720 /* OpenSans-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Regular.ttf"; sourceTree = "<group>"; };
+		F6693CD522F4975B00CD3720 /* OpenSans-LightItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-LightItalic.ttf"; sourceTree = "<group>"; };
+		F6693CD622F4975B00CD3720 /* OpenSans-Semibold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Semibold.ttf"; sourceTree = "<group>"; };
+		F6693CD722F4975B00CD3720 /* OpenSans-BoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-BoldItalic.ttf"; sourceTree = "<group>"; };
+		F6693CD822F4975B00CD3720 /* OpenSans-ExtraBoldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBoldItalic.ttf"; sourceTree = "<group>"; };
+		F6693CD922F4975B00CD3720 /* OpenSans-Light.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-Light.ttf"; sourceTree = "<group>"; };
+		F6693CDA22F4975B00CD3720 /* OpenSans-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-ExtraBold.ttf"; sourceTree = "<group>"; };
+		F6693CDB22F4975B00CD3720 /* OpenSans-SemiboldItalic.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "OpenSans-SemiboldItalic.ttf"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F61DD2A922F3926700B31D4A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E17B8DA22F9CE430072EBFF /* DogRepository */ = {
+			isa = PBXGroup;
+			children = (
+				3E17B8DB22F9CE650072EBFF /* DogRepository.swift */,
+				3E17B8EE22FB095B0072EBFF /* BreedsRepository.swift */,
+				3E5CC4B622FEF17100FE0099 /* CollectionViewCell.swift */,
+				3E5CC4B722FEF17100FE0099 /* CollectionViewCell.xib */,
+			);
+			path = DogRepository;
+			sourceTree = "<group>";
+		};
+		3E17B8ED22FB03AA0072EBFF /* model */ = {
+			isa = PBXGroup;
+			children = (
+				3E17B8E722FAFD070072EBFF /* Doggye.swift */,
+				3E5CC4BC22FEFFE700FE0099 /* LabelStruct.swift */,
+			);
+			path = model;
+			sourceTree = "<group>";
+		};
+		3E5CC4AF22FDA0D000FE0099 /* tableViewDog */ = {
+			isa = PBXGroup;
+			children = (
+				3E5CC4B022FDA15B00FE0099 /* DogImageTableViewCell.swift */,
+				3E5CC4B122FDA15B00FE0099 /* DogImageTableViewCell.xib */,
+				3E5CC4B422FDA6B400FE0099 /* TableDogViewController.swift */,
+			);
+			path = tableViewDog;
+			sourceTree = "<group>";
+		};
+		3E5CC4D72301505600FE0099 /* collectionPageDogs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = collectionPageDogs;
+			sourceTree = "<group>";
+		};
+		F61DD2A322F3926700B31D4A = {
+			isa = PBXGroup;
+			children = (
+				3E5CC4D72301505600FE0099 /* collectionPageDogs */,
+				F61DD2AE22F3926700B31D4A /* Doggoh-Starter */,
+				F61DD2AD22F3926700B31D4A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F61DD2AD22F3926700B31D4A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F61DD2AC22F3926700B31D4A /* Doggoh-Starter.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F61DD2AE22F3926700B31D4A /* Doggoh-Starter */ = {
+			isa = PBXGroup;
+			children = (
+				F6693CCC22F4973600CD3720 /* Resources */,
+				F61DD2AF22F3926700B31D4A /* AppDelegate.swift */,
+				3E17B8E922FAFEAA0072EBFF /* alldogsresponse.json */,
+				3E17B8E522FAFC8F0072EBFF /* dogs.xcassets */,
+				3E17B8E022FAF7420072EBFF /* Property List.plist */,
+				3E5CC4AF22FDA0D000FE0099 /* tableViewDog */,
+				3E17B8ED22FB03AA0072EBFF /* model */,
+				F61DD2C122F392B600B31D4A /* dog_questions_multiple.json */,
+				F61DD2B122F3926700B31D4A /* ViewController.swift */,
+				3E17B8DD22FAECB40072EBFF /* DogsViewController.swift */,
+				F61DD2B322F3926700B31D4A /* Main.storyboard */,
+				3E17B8F622FC730E0072EBFF /* CustomTableViewCell.swift */,
+				3E17B8F722FC730E0072EBFF /* CustomTableViewCell.xib */,
+				3E17B8F022FC61940072EBFF /* TableViewCell.swift */,
+				3E17B8F122FC61940072EBFF /* TableViewCell.xib */,
+				3E5CC46322FCB27F00FE0099 /* NoImageTableViewCell.swift */,
+				3E5CC46422FCB27F00FE0099 /* NoImageTableViewCell.xib */,
+				F61DD2B622F3926900B31D4A /* Assets.xcassets */,
+				F61DD2B822F3926900B31D4A /* LaunchScreen.storyboard */,
+				F61DD2BB22F3926900B31D4A /* Info.plist */,
+			);
+			path = "Doggoh-Starter";
+			sourceTree = "<group>";
+		};
+		F6693CCC22F4973600CD3720 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				3E4D10AB2301B5D900403C57 /* Dog.swift */,
+				3E4D10A82301B55C00403C57 /* ViewController2.swift */,
+				3E4D10A62301B55800403C57 /* PinterestLayout.swift */,
+				3E4D10A52301B55100403C57 /* Dogs.plist */,
+				3E4D10AD2301B5E800403C57 /* DogCollectionViewCell.xib */,
+				3E4D10A32301B54500403C57 /* DogCollectionViewCell.swift */,
+				3E17B8DA22F9CE430072EBFF /* DogRepository */,
+				F6693CCD22F4973D00CD3720 /* Fonts */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		F6693CCD22F4973D00CD3720 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				F6693CD122F4974D00CD3720 /* Montserrat-Bold.ttf */,
+				F6693CCF22F4974D00CD3720 /* Montserrat-Regular.ttf */,
+				F6693CD022F4974D00CD3720 /* MontserratAlternates-Bold.ttf */,
+				F6693CCE22F4974D00CD3720 /* MontserratAlternates-Regular.ttf */,
+				F6693CD222F4975B00CD3720 /* OpenSans-Bold.ttf */,
+				F6693CD722F4975B00CD3720 /* OpenSans-BoldItalic.ttf */,
+				F6693CDA22F4975B00CD3720 /* OpenSans-ExtraBold.ttf */,
+				F6693CD822F4975B00CD3720 /* OpenSans-ExtraBoldItalic.ttf */,
+				F6693CD322F4975B00CD3720 /* OpenSans-Italic.ttf */,
+				F6693CD922F4975B00CD3720 /* OpenSans-Light.ttf */,
+				F6693CD522F4975B00CD3720 /* OpenSans-LightItalic.ttf */,
+				F6693CD422F4975B00CD3720 /* OpenSans-Regular.ttf */,
+				F6693CD622F4975B00CD3720 /* OpenSans-Semibold.ttf */,
+				F6693CDB22F4975B00CD3720 /* OpenSans-SemiboldItalic.ttf */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F61DD2AB22F3926700B31D4A /* Doggoh-Starter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F61DD2BE22F3926900B31D4A /* Build configuration list for PBXNativeTarget "Doggoh-Starter" */;
+			buildPhases = (
+				F61DD2A822F3926700B31D4A /* Sources */,
+				F61DD2A922F3926700B31D4A /* Frameworks */,
+				F61DD2AA22F3926700B31D4A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Doggoh-Starter";
+			productName = "Doggoh-Starter";
+			productReference = F61DD2AC22F3926700B31D4A /* Doggoh-Starter.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F61DD2A422F3926700B31D4A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1020;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "Endava Internship 2019";
+				TargetAttributes = {
+					F61DD2AB22F3926700B31D4A = {
+						CreatedOnToolsVersion = 10.2;
+					};
+				};
+			};
+			buildConfigurationList = F61DD2A722F3926700B31D4A /* Build configuration list for PBXProject "Doggoh-Starter" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F61DD2A322F3926700B31D4A;
+			productRefGroup = F61DD2AD22F3926700B31D4A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F61DD2AB22F3926700B31D4A /* Doggoh-Starter */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F61DD2AA22F3926700B31D4A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E19400E22F9998C00E79A74 /* Montserrat-Regular.ttf in Resources */,
+				3E17B8F322FC61940072EBFF /* TableViewCell.xib in Resources */,
+				3E19401322F9999C00E79A74 /* OpenSans-ExtraBold.ttf in Resources */,
+				3E17B8EA22FAFEAB0072EBFF /* alldogsresponse.json in Resources */,
+				3E19401622F999A300E79A74 /* OpenSans-Light.ttf in Resources */,
+				3E19400D22F9998500E79A74 /* Montserrat-Bold.ttf in Resources */,
+				3E19401022F9999400E79A74 /* MontserratAlternates-Regular.ttf in Resources */,
+				3E5CC4B322FDA15B00FE0099 /* DogImageTableViewCell.xib in Resources */,
+				3E19401522F999A100E79A74 /* OpenSans-Italic.ttf in Resources */,
+				3E17B8E622FAFC8F0072EBFF /* dogs.xcassets in Resources */,
+				3E19401822F999AC00E79A74 /* OpenSans-Regular.ttf in Resources */,
+				F61DD2BA22F3926900B31D4A /* LaunchScreen.storyboard in Resources */,
+				3E19401222F9999900E79A74 /* OpenSans-BoldItalic.ttf in Resources */,
+				3E5CC46622FCB27F00FE0099 /* NoImageTableViewCell.xib in Resources */,
+				F61DD2B722F3926900B31D4A /* Assets.xcassets in Resources */,
+				3E17B8E122FAF7420072EBFF /* Property List.plist in Resources */,
+				3E19401A22F999B200E79A74 /* OpenSans-SemiboldItalic.ttf in Resources */,
+				3E19401422F9999E00E79A74 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
+				3E5CC4B922FEF17100FE0099 /* CollectionViewCell.xib in Resources */,
+				3E19401122F9999700E79A74 /* OpenSans-Bold.ttf in Resources */,
+				F61DD2C222F392B600B31D4A /* dog_questions_multiple.json in Resources */,
+				3E19400F22F9999200E79A74 /* MontserratAlternates-Bold.ttf in Resources */,
+				3E17B8F922FC730E0072EBFF /* CustomTableViewCell.xib in Resources */,
+				F61DD2B522F3926700B31D4A /* Main.storyboard in Resources */,
+				3E19401722F999AA00E79A74 /* OpenSans-LightItalic.ttf in Resources */,
+				3E19401922F999AF00E79A74 /* OpenSans-Semibold.ttf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F61DD2A822F3926700B31D4A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E4D10A72301B55800403C57 /* PinterestLayout.swift in Sources */,
+				3E5CC4B222FDA15B00FE0099 /* DogImageTableViewCell.swift in Sources */,
+				3E4D10A42301B54500403C57 /* DogCollectionViewCell.swift in Sources */,
+				3E17B8E822FAFD070072EBFF /* Doggye.swift in Sources */,
+				3E5CC4B822FEF17100FE0099 /* CollectionViewCell.swift in Sources */,
+				F61DD2B222F3926700B31D4A /* ViewController.swift in Sources */,
+				3E5CC46522FCB27F00FE0099 /* NoImageTableViewCell.swift in Sources */,
+				3E17B8F822FC730E0072EBFF /* CustomTableViewCell.swift in Sources */,
+				3E17B8DC22F9CE650072EBFF /* DogRepository.swift in Sources */,
+				3E4D10AC2301B5D900403C57 /* Dog.swift in Sources */,
+				F61DD2B022F3926700B31D4A /* AppDelegate.swift in Sources */,
+				3E5CC4B522FDA6B400FE0099 /* TableDogViewController.swift in Sources */,
+				3E17B8EF22FB095B0072EBFF /* BreedsRepository.swift in Sources */,
+				3E17B8F222FC61940072EBFF /* TableViewCell.swift in Sources */,
+				3E5CC4BD22FEFFE700FE0099 /* LabelStruct.swift in Sources */,
+				3E4D10A92301B55C00403C57 /* ViewController2.swift in Sources */,
+				3E17B8DE22FAECB40072EBFF /* DogsViewController.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		F61DD2B322F3926700B31D4A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F61DD2B422F3926700B31D4A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F61DD2B822F3926900B31D4A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F61DD2B922F3926900B31D4A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F61DD2BC22F3926900B31D4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F61DD2BD22F3926900B31D4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F61DD2BF22F3926900B31D4A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Doggoh-Starter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.internship.Doggoh-Starter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F61DD2C022F3926900B31D4A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = "Doggoh-Starter/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.internship.Doggoh-Starter";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F61DD2A722F3926700B31D4A /* Build configuration list for PBXProject "Doggoh-Starter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61DD2BC22F3926900B31D4A /* Debug */,
+				F61DD2BD22F3926900B31D4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F61DD2BE22F3926900B31D4A /* Build configuration list for PBXNativeTarget "Doggoh-Starter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F61DD2BF22F3926900B31D4A /* Debug */,
+				F61DD2C022F3926900B31D4A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F61DD2A422F3926700B31D4A /* Project object */;
+}

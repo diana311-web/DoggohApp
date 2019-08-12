@@ -24,25 +24,41 @@
                 <rect key="frame" x="0.0" y="0.0" width="151" height="94"/>
                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                 <subviews>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5W3-tI-OY8">
-                        <rect key="frame" x="0.0" y="44" width="151" height="16"/>
+                    <view contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" translatesAutoresizingMaskIntoConstraints="NO" id="Q3t-Y1-6tB">
+                        <rect key="frame" x="40.5" y="-4" width="70.5" height="112"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="252" verticalHuggingPriority="251" horizontalCompressionResistancePriority="751" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5W3-tI-OY8">
+                                <rect key="frame" x="16" y="52.5" width="38.5" height="17.5"/>
+                                <color key="backgroundColor" red="0.89829039573669434" green="0.90163081884384155" blue="0.92549359798431396" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                <color key="textColor" red="0.71824187040328979" green="0.72469633817672729" blue="0.7803996205329895" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="16"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                        </subviews>
                         <color key="backgroundColor" red="0.89829039573669434" green="0.90163081884384155" blue="0.92549359798431396" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
-                        <color key="textColor" red="0.71824187040328979" green="0.72469633817672729" blue="0.7803996205329895" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                        <nil key="highlightedColor"/>
+                        <constraints>
+                            <constraint firstItem="FRM-rg-2yy" firstAttribute="trailing" secondItem="5W3-tI-OY8" secondAttribute="trailing" constant="16" id="IXA-Lx-QND"/>
+                            <constraint firstItem="5W3-tI-OY8" firstAttribute="leading" secondItem="FRM-rg-2yy" secondAttribute="leading" constant="16" id="NgE-M5-6Nv"/>
+                            <constraint firstItem="5W3-tI-OY8" firstAttribute="top" secondItem="FRM-rg-2yy" secondAttribute="top" constant="8" id="Xpz-wx-8LH"/>
+                            <constraint firstItem="FRM-rg-2yy" firstAttribute="bottom" secondItem="5W3-tI-OY8" secondAttribute="bottom" constant="8" id="r10-Qc-nl0"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="FRM-rg-2yy"/>
                         <userDefinedRuntimeAttributes>
                             <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
                                 <integer key="value" value="16"/>
                             </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                    </label>
+                    </view>
                 </subviews>
             </view>
             <constraints>
-                <constraint firstItem="5W3-tI-OY8" firstAttribute="leading" secondItem="ZTg-uK-7eu" secondAttribute="leading" id="QW5-rS-hvg"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="top" secondItem="5W3-tI-OY8" secondAttribute="top" id="UVu-YG-Ggv"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="trailing" secondItem="5W3-tI-OY8" secondAttribute="trailing" id="ftT-ty-iG7"/>
-                <constraint firstItem="ZTg-uK-7eu" firstAttribute="bottom" secondItem="5W3-tI-OY8" secondAttribute="bottom" id="hxL-Pw-piX"/>
+                <constraint firstItem="Q3t-Y1-6tB" firstAttribute="centerX" secondItem="ZTg-uK-7eu" secondAttribute="centerX" id="LDC-Ws-aMx"/>
+                <constraint firstItem="Q3t-Y1-6tB" firstAttribute="centerY" secondItem="ZTg-uK-7eu" secondAttribute="centerY" id="mhz-oi-6hV"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
             <size key="customSize" width="135" height="94"/>
@@ -52,6 +68,7 @@
                 </userDefinedRuntimeAttribute>
             </userDefinedRuntimeAttributes>
             <connections>
+                <outlet property="containerView" destination="Q3t-Y1-6tB" id="Pr1-AP-TGG"/>
                 <outlet property="labelName" destination="5W3-tI-OY8" id="INK-sU-5pJ"/>
             </connections>
             <point key="canvasLocation" x="-321" y="50"/>

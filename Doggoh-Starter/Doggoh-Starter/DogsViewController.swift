@@ -13,7 +13,7 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     private var sectionTitles = [String]()
     let contactReuseIdentifier = "dog"
     var nrsection = 0
-    var dogsArray = [Dog]()
+    var dogsArray = [Doggye]()
     var dogs : [String:[String]] = [:]
     var dogsBread=[String]()
     
@@ -37,7 +37,7 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
             
             dogs.forEach { (key, value) in
                 
-                let dog = Dog(breed: key, subBreeds: value)
+                let dog = Doggye(breed: key, subBreeds: value)
                 dogsArray.append(dog)
                 
             }
@@ -75,7 +75,7 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
 //            return dogs.filter({ $0.value.count == 0}).count
 //        }
      //  print ("subreeds in number", subbreeds)
-       return subbreeds?.count ?? 0
+       return subbreeds?.count ?? 1
         
     }
     
@@ -89,10 +89,12 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     //    print ("subreeds", dogsArray[indexPath.section].subBreeds?.count)
      // if dogsArray[indexPath.section].subBreeds?.count == 0
        // print ("lista ",dogsArray[indexPath.section].breed)
-       if subbreeds!.count == 0{
+        print("subbreeds", subbreeds)
+        if  subbreeds?.count == 0 {
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
             cell.config(simpleDogs[indexPath.row], String(Int.random(in: 0..<23)))
             cell.separatorInset = UIEdgeInsets(top: 0, left: 89, bottom: 0, right:0)
+            print ("intru aici")
             return cell
 
         }
@@ -133,11 +135,11 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     }
         func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
       
-        let sectionHeader = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+     
             
         let sectionKey = dogsBread[section]
         let subbreeds = dogs[sectionKey]
-        let titleLabel = UILabel(frame: sectionHeader.bounds)
+     
 //            if dogsArray[section].subBreeds?.count == 0{
 //                titleLabel.text = ""
 //            }
@@ -145,20 +147,32 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
 //            {
 //                print ("am intrat pe else")
 //                print (dogsArray[section].subBreeds)
-     
-//            if subbreeds?.count == 0
-//            {
-//                titleLabel.text = " "
-//
-//            }else{
-                titleLabel.font = UIFont .boldSystemFont(ofSize: 14)
+            let  sectionHeader = UIView()
+            var titleLabel = UILabel()
+            if subbreeds?.count == 0{
+            //    sectionHeader = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 80))
+                titleLabel = UILabel(frame: sectionHeader.bounds)
+                titleLabel.text = dogsBread[section].uppercased()
+                titleLabel.font = UIFont(name: "Montserrat-Bold", size: 14)
+                titleLabel.frame = CGRect(x: 89, y: 30, width: tableView.frame.size.width-20, height: 20)
+                let imageView = UIImageView(frame: CGRect(x: 35, y: 25, width: 40, height: 40)); // set as you want
+                let image = UIImage(named: String(Int.random(in: 0..<23)))
+                imageView.image = image
+                sectionHeader.addSubview(imageView)
+                sectionHeader.addSubview(titleLabel)
+                
+            }
+        else{
+           
+           //     sectionHeader = UIView(frame: CGRect(x: 0, y: 0, width: tableView.frame.size.width, height: 40))
+                titleLabel =  UILabel(frame: sectionHeader.bounds)
+                titleLabel.font = UIFont(name: "Montserrat-Bold", size: 14)
                 titleLabel.textAlignment = .left
                 titleLabel.frame = CGRect(x: 89, y: 10, width: tableView.frame.size.width-20, height: 20)
                 titleLabel.text = dogsBread[section].uppercased()
-                //            }}
-          
-        sectionHeader.addSubview(titleLabel)
-           
+                sectionHeader.addSubview(titleLabel)
+            }
+            
         return sectionHeader
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {

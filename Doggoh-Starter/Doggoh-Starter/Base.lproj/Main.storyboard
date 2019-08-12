@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KKb-pr-eKk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="70" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="KKb-pr-eKk">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIZZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKT-qq-2Pd">
-                                <rect key="frame" x="20" y="159" width="523" height="196"/>
+                                <rect key="frame" x="20" y="159" width="474.5" height="186.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="160"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -105,22 +105,6 @@
             </objects>
             <point key="canvasLocation" x="-1675.3623188405797" y="681.69642857142856"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="3CL-I6-WbF">
-            <objects>
-                <viewController id="X5c-tb-lRL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ndR-yQ-PVp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="jOD-Eb-J4s"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="casuta" id="3px-kk-TFg"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MML-64-FBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1673" y="-886"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zvg-tF-KGn">
             <objects>
@@ -131,7 +115,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="X5c-tb-lRL" kind="relationship" relationship="viewControllers" id="QFX-zH-X8M"/>
+                        <segue destination="vso-W4-jjt" kind="relationship" relationship="viewControllers" id="2oD-OV-JI5"/>
                         <segue destination="K3Y-eF-c5l" kind="relationship" relationship="viewControllers" id="oEa-2a-dvZ"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="i6D-Hz-xI9"/>
                         <segue destination="Reu-iD-l7a" kind="relationship" relationship="viewControllers" id="jWi-LL-e33"/>
@@ -139,7 +123,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s4-j2-4EV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3403" y="-58"/>
+            <point key="canvasLocation" x="-3491" y="-58"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -906,6 +890,51 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q25-3s-yqo" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-649" y="771"/>
+        </scene>
+        <!--DOGGOH-->
+        <scene sceneID="Zmt-W4-poc">
+            <objects>
+                <viewController title="DOGGOH" id="vso-W4-jjt" customClass="ViewController" customModule="CollectionViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1SE-Uq-cwi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PeC-yf-dm9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="cNK-bU-fwr" customClass="PinterestLayout" customModule="CollectionViewExample" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6v-1B-33V">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ZMl-Zh-oHS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PeC-yf-dm9" firstAttribute="trailing" secondItem="f4e-Q2-0Zb" secondAttribute="trailing" id="6sd-5I-BpF"/>
+                            <constraint firstItem="E6v-1B-33V" firstAttribute="trailing" secondItem="f4e-Q2-0Zb" secondAttribute="trailing" id="Hyv-SM-Bcj"/>
+                            <constraint firstItem="PeC-yf-dm9" firstAttribute="leading" secondItem="f4e-Q2-0Zb" secondAttribute="leading" id="QWt-3w-SmL"/>
+                            <constraint firstItem="f4e-Q2-0Zb" firstAttribute="bottom" secondItem="PeC-yf-dm9" secondAttribute="bottom" id="Rzp-JS-EEg"/>
+                            <constraint firstItem="PeC-yf-dm9" firstAttribute="top" secondItem="f4e-Q2-0Zb" secondAttribute="top" id="VNq-8I-czE"/>
+                            <constraint firstItem="E6v-1B-33V" firstAttribute="leading" secondItem="f4e-Q2-0Zb" secondAttribute="leading" id="sqG-GF-37S"/>
+                            <constraint firstItem="E6v-1B-33V" firstAttribute="top" secondItem="1SE-Uq-cwi" secondAttribute="top" id="uAI-e1-fEo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f4e-Q2-0Zb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="casuta" id="gpt-dI-sJ4"/>
+                    <navigationItem key="navigationItem" title="DOGGOH" id="vyM-mO-Vmc"/>
+                    <connections>
+                        <outlet property="collectionView" destination="PeC-yf-dm9" id="FFD-WV-qbR"/>
+                        <outlet property="gradientView" destination="E6v-1B-33V" id="U7E-7t-Asc"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7H-d6-czz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-3490" y="-887"/>
         </scene>
     </scenes>
     <resources>
