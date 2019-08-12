@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--DOGGOH-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController title="DOGGOH" id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionViewExample" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fXN-2B-JoO">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="fKy-dn-xEu" customClass="PinterestLayout" customModule="CollectionViewExample" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="owD-s1-09J">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="oEW-lw-FTU"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="fXN-2B-JoO" secondAttribute="bottom" id="5tc-F7-41s"/>
+                            <constraint firstItem="owD-s1-09J" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="KXL-Ml-owA"/>
+                            <constraint firstItem="fXN-2B-JoO" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="RHc-s5-a8H"/>
+                            <constraint firstItem="fXN-2B-JoO" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="afe-zM-SFe"/>
+                            <constraint firstItem="fXN-2B-JoO" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="oX3-69-y6h"/>
+                            <constraint firstItem="owD-s1-09J" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qAc-0u-4xx"/>
+                            <constraint firstItem="owD-s1-09J" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="wNC-7A-bE1"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <navigationItem key="navigationItem" title="DOGGOH" id="fJL-ih-RcT"/>
+                    <connections>
+                        <outlet property="collectionView" destination="fXN-2B-JoO" id="F1X-E8-P4p"/>
+                        <outlet property="gradientView" destination="owD-s1-09J" id="592-re-cDm"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="602.89855072463774" y="97.767857142857139"/>
+        </scene>
+    </scenes>
+</document>
