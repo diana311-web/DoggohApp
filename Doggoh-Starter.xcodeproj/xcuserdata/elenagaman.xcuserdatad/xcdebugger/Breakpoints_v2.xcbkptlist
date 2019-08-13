@@ -10,12 +10,232 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "Doggoh-Starter/TableViewCell.swift"
-            timestampString = "586977843.822323"
+            timestampString = "587376384.406533"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "16"
             endingLineNumber = "16"
             landmarkName = "awakeFromNib()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "../../../../Desktop/work/week4/CollectionViewExample/CollectionViewExample/DogCollectionViewCell.swift"
+            timestampString = "587323104.5042551"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "10"
+            endingLineNumber = "10"
+            landmarkName = "unknown"
+            landmarkType = "0">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Doggoh-Starter/Resources/ViewController2.swift"
+            timestampString = "587372478.4285901"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "16"
+            endingLineNumber = "16"
+            landmarkName = "ViewController2"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Doggoh_Starter.ViewController2.dogs.getter : Swift.Array&lt;Doggoh_Starter.Dog&gt;"
+                  moduleName = "Doggoh-Starter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elenagaman/Documents/GitHub/DoggohApp/Doggoh-Starter/Doggoh-Starter/Resources/ViewController2.swift"
+                  timestampString = "587371829.1918629"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "114">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Doggoh_Starter.ViewController2.dogs.setter : Swift.Array&lt;Doggoh_Starter.Dog&gt;"
+                  moduleName = "Doggoh-Starter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elenagaman/Documents/GitHub/DoggohApp/Doggoh-Starter/Doggoh-Starter/Resources/ViewController2.swift"
+                  timestampString = "587371829.193683"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "128">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Doggoh_Starter.ViewController2.dogs.modify : Swift.Array&lt;Doggoh_Starter.Dog&gt;"
+                  moduleName = "Doggoh-Starter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elenagaman/Documents/GitHub/DoggohApp/Doggoh-Starter/Doggoh-Starter/Resources/ViewController2.swift"
+                  timestampString = "587371829.195497"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Doggoh_Starter.ViewController2.dogs.modify : Swift.Array&lt;Doggoh_Starter.Dog&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "Doggoh-Starter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elenagaman/Documents/GitHub/DoggohApp/Doggoh-Starter/Doggoh-Starter/Resources/ViewController2.swift"
+                  timestampString = "587371829.1972769"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Doggoh_Starter.ViewController2.init(nibName: Swift.Optional&lt;Swift.String&gt;, bundle: Swift.Optional&lt;__C.NSBundle&gt;) -&gt; Doggoh_Starter.ViewController2"
+                  moduleName = "Doggoh-Starter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elenagaman/Documents/GitHub/DoggohApp/Doggoh-Starter/Doggoh-Starter/Resources/ViewController2.swift"
+                  timestampString = "587371829.199294"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "408">
+               </Location>
+               <Location
+                  shouldBeEnabled = "No"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "Doggoh_Starter.ViewController2.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;Doggoh_Starter.ViewController2&gt;"
+                  moduleName = "Doggoh-Starter"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/elenagaman/Documents/GitHub/DoggohApp/Doggoh-Starter/Doggoh-Starter/Resources/ViewController2.swift"
+                  timestampString = "587371829.201311"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "16"
+                  endingLineNumber = "16"
+                  offsetFromSymbolStart = "328">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Doggoh-Starter/Resources/ViewController2.swift"
+            timestampString = "587372478.428997"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "143"
+            endingLineNumber = "143"
+            landmarkName = "collectionView(_:cellForItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Doggoh-Starter/Resources/ViewController2.swift"
+            timestampString = "587372478.429266"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "126"
+            endingLineNumber = "126"
+            landmarkName = "collectionView(_:numberOfItemsInSection:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Doggoh-Starter/Resources/ViewController2.swift"
+            timestampString = "587372478.4295141"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "collectionView(_:didSelectItemAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Doggoh-Starter/DogsViewController.swift"
+            timestampString = "587392931.340448"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "67"
+            endingLineNumber = "67"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Doggoh-Starter/DogsViewController.swift"
+            timestampString = "587392931.34057"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "73"
+            endingLineNumber = "73"
+            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "Doggoh-Starter/DogsViewController.swift"
+            timestampString = "587392931.3406481"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "59"
+            endingLineNumber = "59"
+            landmarkName = "tableView(_:numberOfRowsInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

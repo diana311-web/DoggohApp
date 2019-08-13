@@ -29,7 +29,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="50" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="KKb-pr-eKk">
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="KKb-pr-eKk">
                                 <rect key="frame" x="0.0" y="44" width="414" height="769"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
@@ -67,7 +67,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIZZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKT-qq-2Pd">
-                                <rect key="frame" x="20" y="159" width="523" height="196"/>
+                                <rect key="frame" x="20" y="159" width="523" height="195.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="160"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -82,10 +82,23 @@
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="nw9-df-cXl">
-                                <rect key="frame" x="0.0" y="535" width="414" height="216"/>
-                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
-                            </pickerView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koR-TZ-tGo">
+                                <rect key="frame" x="30" y="561" width="175" height="50"/>
+                                <color key="backgroundColor" red="0.89087313413619995" green="0.46887761354446411" blue="0.29405826330184937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="agD-X8-vRA"/>
+                                    <constraint firstAttribute="width" constant="175" id="gvw-Xz-UfV"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="Montserrat-Regular" family="Montserrat" pointSize="14"/>
+                                <state key="normal" title="BEGIN QUIZ">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                        <integer key="value" value="22"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -93,7 +106,9 @@
                             <constraint firstItem="ym3-oU-QjQ" firstAttribute="top" secondItem="Dc5-Fk-W8T" secondAttribute="top" constant="11" id="CE8-xt-jdC"/>
                             <constraint firstItem="YvY-TY-yez" firstAttribute="leading" secondItem="Dc5-Fk-W8T" secondAttribute="leading" constant="30" id="L5Q-rV-pmb"/>
                             <constraint firstItem="YvY-TY-yez" firstAttribute="top" secondItem="Dc5-Fk-W8T" secondAttribute="top" constant="308" id="dTA-Ml-cDU"/>
+                            <constraint firstItem="koR-TZ-tGo" firstAttribute="top" secondItem="YvY-TY-yez" secondAttribute="bottom" constant="109" id="kYt-dy-Ibz"/>
                             <constraint firstItem="ym3-oU-QjQ" firstAttribute="leading" secondItem="Dc5-Fk-W8T" secondAttribute="leading" constant="144" id="qVa-Hl-UyK"/>
+                            <constraint firstItem="koR-TZ-tGo" firstAttribute="leading" secondItem="Dc5-Fk-W8T" secondAttribute="leading" constant="30" id="qhV-5e-Rsd"/>
                             <constraint firstItem="RKT-qq-2Pd" firstAttribute="top" secondItem="Dc5-Fk-W8T" secondAttribute="top" constant="115" id="qr0-J1-FEr"/>
                             <constraint firstItem="RKT-qq-2Pd" firstAttribute="leading" secondItem="Dc5-Fk-W8T" secondAttribute="leading" constant="20" id="wpr-qW-JgG"/>
                         </constraints>
@@ -105,22 +120,6 @@
             </objects>
             <point key="canvasLocation" x="-1675.3623188405797" y="681.69642857142856"/>
         </scene>
-        <!--View Controller-->
-        <scene sceneID="3CL-I6-WbF">
-            <objects>
-                <viewController id="X5c-tb-lRL" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" id="ndR-yQ-PVp">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
-                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                        <viewLayoutGuide key="safeArea" id="jOD-Eb-J4s"/>
-                    </view>
-                    <tabBarItem key="tabBarItem" title="" image="casuta" id="3px-kk-TFg"/>
-                </viewController>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="MML-64-FBh" userLabel="First Responder" sceneMemberID="firstResponder"/>
-            </objects>
-            <point key="canvasLocation" x="-1673" y="-886"/>
-        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zvg-tF-KGn">
             <objects>
@@ -131,7 +130,7 @@
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                     </tabBar>
                     <connections>
-                        <segue destination="X5c-tb-lRL" kind="relationship" relationship="viewControllers" id="QFX-zH-X8M"/>
+                        <segue destination="vso-W4-jjt" kind="relationship" relationship="viewControllers" id="aPl-rw-Pgc"/>
                         <segue destination="K3Y-eF-c5l" kind="relationship" relationship="viewControllers" id="oEa-2a-dvZ"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="i6D-Hz-xI9"/>
                         <segue destination="Reu-iD-l7a" kind="relationship" relationship="viewControllers" id="jWi-LL-e33"/>
@@ -139,7 +138,7 @@
                 </tabBarController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="3s4-j2-4EV" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-3403" y="-58"/>
+            <point key="canvasLocation" x="-3491" y="-58"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="tne-QT-ifu">
@@ -377,8 +376,8 @@
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="bJQ-fO-OLa">
                                                         <rect key="frame" x="35" y="281.5" width="378" height="198.5"/>
                                                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="8" minimumInteritemSpacing="8" id="CLZ-Rf-WWH">
-                                                            <size key="itemSize" width="50" height="50"/>
+                                                        <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="4" minimumInteritemSpacing="4" id="CLZ-Rf-WWH">
+                                                            <size key="itemSize" width="0.0" height="0.0"/>
                                                             <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                             <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                             <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
@@ -905,7 +904,52 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="q25-3s-yqo" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-649" y="771"/>
+            <point key="canvasLocation" x="-2683" y="1677"/>
+        </scene>
+        <!--DOGGOH-->
+        <scene sceneID="Zmt-W4-poc">
+            <objects>
+                <viewController title="DOGGOH" id="vso-W4-jjt" customClass="ViewControllerCollections" customModule="Doggoh_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1SE-Uq-cwi">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PeC-yf-dm9">
+                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <collectionViewLayout key="collectionViewLayout" id="cNK-bU-fwr" customClass="PinterestLayout" customModule="Doggoh_Starter" customModuleProvider="target"/>
+                                <cells/>
+                            </collectionView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="E6v-1B-33V">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="150"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="ZMl-Zh-oHS"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PeC-yf-dm9" firstAttribute="trailing" secondItem="f4e-Q2-0Zb" secondAttribute="trailing" id="6sd-5I-BpF"/>
+                            <constraint firstItem="E6v-1B-33V" firstAttribute="trailing" secondItem="f4e-Q2-0Zb" secondAttribute="trailing" id="Hyv-SM-Bcj"/>
+                            <constraint firstItem="PeC-yf-dm9" firstAttribute="leading" secondItem="f4e-Q2-0Zb" secondAttribute="leading" id="QWt-3w-SmL"/>
+                            <constraint firstItem="f4e-Q2-0Zb" firstAttribute="bottom" secondItem="PeC-yf-dm9" secondAttribute="bottom" id="Rzp-JS-EEg"/>
+                            <constraint firstItem="PeC-yf-dm9" firstAttribute="top" secondItem="f4e-Q2-0Zb" secondAttribute="top" id="VNq-8I-czE"/>
+                            <constraint firstItem="E6v-1B-33V" firstAttribute="leading" secondItem="f4e-Q2-0Zb" secondAttribute="leading" id="sqG-GF-37S"/>
+                            <constraint firstItem="E6v-1B-33V" firstAttribute="top" secondItem="1SE-Uq-cwi" secondAttribute="top" id="uAI-e1-fEo"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="f4e-Q2-0Zb"/>
+                    </view>
+                    <tabBarItem key="tabBarItem" title="" image="casuta" id="gpt-dI-sJ4"/>
+                    <navigationItem key="navigationItem" title="DOGGOH" id="vyM-mO-Vmc"/>
+                    <connections>
+                        <outlet property="collectionView" destination="PeC-yf-dm9" id="FbT-oP-ymd"/>
+                        <outlet property="gradientView" destination="E6v-1B-33V" id="ZGP-vJ-8PV"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="T7H-d6-czz" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2725" y="-745"/>
         </scene>
     </scenes>
     <resources>

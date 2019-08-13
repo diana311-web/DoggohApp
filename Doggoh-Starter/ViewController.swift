@@ -16,15 +16,15 @@ class ViewController: UIViewController {
     var savedName : String = ""
     
     var dogs :[String] = ["Husky",
-                         "Keeshond",
-                         "Kelpie",
-                         "Komondor",
-                         "Kuvasz",
-                         "Labrador",
-                         "Leonberg",
-                        ]
+                          "Keeshond",
+                          "Kelpie",
+                          "Komondor",
+                          "Kuvasz",
+                          "Labrador",
+                          "Leonberg",
+    ]
     var selectedItems = [String]()
-    var nameButoons = ["QUIET", "CHEERFULL", "ACTIVE","PLAYFUL", "LOUD","CURIOUS", "PEACEFUL", "FRIENDLY"]
+    var nameButoons = ["QUIET", "CHEERFULL", "ACTIVE","PLAYFUL", "LOUD","CURIOUS", "PEACEFUL", "FRIENDLY","QUIET", "CHEERFULL", "ACTIVE","PLAYFUL", "LOUD","CURIOUS", "PEACEFUL", "FRIENDLY"]
     override func viewDidLoad() {
         super.viewDidLoad()
         nameForDogsPicker.isHidden = false
@@ -33,21 +33,16 @@ class ViewController: UIViewController {
         colectionView.delegate = self
         colectionView.dataSource = self
         colectionView.register(UINib(nibName: "CollectionViewCell", bundle: Bundle.main), forCellWithReuseIdentifier: "CollectionViewCell")
-    //    self.view.addSubview(nameForDogsPicker)
-        // Do any additional setup after loading the view.
         textName.attributedPlaceholder = NSAttributedString(string: "American Alaskan Malamute", attributes: [NSAttributedString.Key.foregroundColor: UIColor.white])
         
         colectionView.allowsMultipleSelection = true
-         configureDatePicker()
+        configureDatePicker()
     }
-
+    
     
     @IBAction func buttonPressed(_ sender: Any) {
         print("button pressed")
         textName.isUserInteractionEnabled = true
-    //    nameForDogsPicker?.isHidden = !nameForDogsPicker!.isHidden
-      
-        
         
     }
     
@@ -89,7 +84,7 @@ class ViewController: UIViewController {
             colectionView.cancelInteractiveMovement()
         }
     }
-   
+    
 }
 extension ViewController:UIPickerViewDelegate{
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
@@ -102,7 +97,7 @@ extension ViewController:UIPickerViewDataSource{
         return dogs[row]
     }
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
-       return 1
+        return 1
     }
     
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
@@ -113,25 +108,27 @@ extension ViewController:UIPickerViewDataSource{
 }
 extension ViewController : UICollectionViewDelegateFlowLayout{
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-
-                let width = (collectionView.frame.size.width - 32 - collectionView.contentInset.left - collectionView.contentInset.right) / 3
-               let height: CGFloat = 48
-
-                return CGSize(width: width, height: height)
-            }
-    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        
+        let width = (collectionView.frame.size.width - 32 - collectionView.contentInset.left - collectionView.contentInset.right) / 3
+        let height: CGFloat = 40
+        
+        return CGSize(width: width, height: height)
     }
-
+    
+    
+    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
+        return 4
+    }
+    
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumInteritemSpacingForSectionAt section: Int) -> CGFloat {
-        return 8
+        return 4
     }
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-       
+        
         let btn = nameButoons[indexPath.row]
         selectedItems.append(btn)
-        print(selectedItems)
-        print(indexPath.row)
+      //  print(selectedItems)
+       // print(indexPath.row)
     }
     
     func collectionView(_ collectionView: UICollectionView, didDeselectItemAt indexPath: IndexPath) {
@@ -141,13 +138,9 @@ extension ViewController : UICollectionViewDelegateFlowLayout{
             return
         }
         selectedItems.remove(at: index)
-        
         print("Deselect",indexPath.row)
     }
-//    func scrollViewDidEndDecelerating(_ scrollView: UIScrollView) {
-//        colectionView.reloadData()
-//    }
-   
+    
     
 }
 
@@ -163,11 +156,11 @@ extension ViewController: UICollectionViewDataSource{
         
         let btn = LabelStruct(name: word)
         cell.nume = btn
-        
-        if selectedItems.contains(word){
-            cell.isSelected = false
-        }
-       
+//        if selectedItems.contains(word){
+//
+//            cell.isSelected = true
+//        }
+//
         return cell
     }
     

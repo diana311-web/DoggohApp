@@ -7,7 +7,7 @@
 //
 
 import UIKit
-struct Dog {
+struct Doggye {
     var breed  : String
     var subBreeds : [String]?
 }

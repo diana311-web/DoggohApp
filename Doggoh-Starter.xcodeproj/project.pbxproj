@@ -11,8 +11,7 @@
 		3E17B8DE22FAECB40072EBFF /* DogsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8DD22FAECB40072EBFF /* DogsViewController.swift */; };
 		3E17B8E122FAF7420072EBFF /* Property List.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8E022FAF7420072EBFF /* Property List.plist */; };
 		3E17B8E622FAFC8F0072EBFF /* dogs.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8E522FAFC8F0072EBFF /* dogs.xcassets */; };
-		3E17B8E822FAFD070072EBFF /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8E722FAFD070072EBFF /* Dog.swift */; };
-		3E17B8EA22FAFEAB0072EBFF /* alldogsresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8E922FAFEAA0072EBFF /* alldogsresponse.json */; };
+		3E17B8E822FAFD070072EBFF /* Doggye.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8E722FAFD070072EBFF /* Doggye.swift */; };
 		3E17B8EF22FB095B0072EBFF /* BreedsRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8EE22FB095B0072EBFF /* BreedsRepository.swift */; };
 		3E17B8F222FC61940072EBFF /* TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E17B8F022FC61940072EBFF /* TableViewCell.swift */; };
 		3E17B8F322FC61940072EBFF /* TableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E17B8F122FC61940072EBFF /* TableViewCell.xib */; };
@@ -32,8 +31,13 @@
 		3E19401822F999AC00E79A74 /* OpenSans-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD422F4975B00CD3720 /* OpenSans-Regular.ttf */; };
 		3E19401922F999AF00E79A74 /* OpenSans-Semibold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CD622F4975B00CD3720 /* OpenSans-Semibold.ttf */; };
 		3E19401A22F999B200E79A74 /* OpenSans-SemiboldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = F6693CDB22F4975B00CD3720 /* OpenSans-SemiboldItalic.ttf */; };
-		3E5CC46522FCB27F00FE0099 /* NoImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC46322FCB27F00FE0099 /* NoImageTableViewCell.swift */; };
-		3E5CC46622FCB27F00FE0099 /* NoImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5CC46422FCB27F00FE0099 /* NoImageTableViewCell.xib */; };
+		3E4D10BB230298A300403C57 /* Dog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10BA230298A300403C57 /* Dog.swift */; };
+		3E4D10BD230298DB00403C57 /* ViewControllerCollections.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10BC230298DB00403C57 /* ViewControllerCollections.swift */; };
+		3E4D10BF2302992800403C57 /* PinterestLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10BE2302992800403C57 /* PinterestLayout.swift */; };
+		3E4D10C92302A0B900403C57 /* DogCollectionViewCellClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10C72302A0B900403C57 /* DogCollectionViewCellClass.swift */; };
+		3E4D10CA2302A0B900403C57 /* DogCollectionViewCellClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D10C82302A0B900403C57 /* DogCollectionViewCellClass.xib */; };
+		3E4D10CC2302A6D900403C57 /* Dogs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D10CB2302A6D900403C57 /* Dogs.plist */; };
+		3E4D10DE23034D9500403C57 /* alldogsresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D10DD23034D9500403C57 /* alldogsresponse.json */; };
 		3E5CC4B222FDA15B00FE0099 /* DogImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B022FDA15B00FE0099 /* DogImageTableViewCell.swift */; };
 		3E5CC4B322FDA15B00FE0099 /* DogImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B122FDA15B00FE0099 /* DogImageTableViewCell.xib */; };
 		3E5CC4B522FDA6B400FE0099 /* TableDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B422FDA6B400FE0099 /* TableDogViewController.swift */; };
@@ -53,15 +57,20 @@
 		3E17B8DD22FAECB40072EBFF /* DogsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogsViewController.swift; sourceTree = "<group>"; };
 		3E17B8E022FAF7420072EBFF /* Property List.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Property List.plist"; sourceTree = "<group>"; };
 		3E17B8E522FAFC8F0072EBFF /* dogs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = dogs.xcassets; sourceTree = "<group>"; };
-		3E17B8E722FAFD070072EBFF /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
-		3E17B8E922FAFEAA0072EBFF /* alldogsresponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = alldogsresponse.json; path = ../../../../../../Downloads/alldogsresponse.json; sourceTree = "<group>"; };
+		3E17B8E722FAFD070072EBFF /* Doggye.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Doggye.swift; sourceTree = "<group>"; };
 		3E17B8EE22FB095B0072EBFF /* BreedsRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BreedsRepository.swift; sourceTree = "<group>"; };
 		3E17B8F022FC61940072EBFF /* TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableViewCell.swift; sourceTree = "<group>"; };
 		3E17B8F122FC61940072EBFF /* TableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = TableViewCell.xib; sourceTree = "<group>"; };
 		3E17B8F622FC730E0072EBFF /* CustomTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomTableViewCell.swift; sourceTree = "<group>"; };
 		3E17B8F722FC730E0072EBFF /* CustomTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = CustomTableViewCell.xib; sourceTree = "<group>"; };
-		3E5CC46322FCB27F00FE0099 /* NoImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoImageTableViewCell.swift; sourceTree = "<group>"; };
-		3E5CC46422FCB27F00FE0099 /* NoImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = NoImageTableViewCell.xib; sourceTree = "<group>"; };
+		3E4D10BA230298A300403C57 /* Dog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Dog.swift; sourceTree = "<group>"; };
+		3E4D10BC230298DB00403C57 /* ViewControllerCollections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewControllerCollections.swift; sourceTree = "<group>"; };
+		3E4D10BE2302992800403C57 /* PinterestLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PinterestLayout.swift; sourceTree = "<group>"; };
+		3E4D10C02302996900403C57 /* Dogs.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Dogs.xcassets; sourceTree = "<group>"; };
+		3E4D10C72302A0B900403C57 /* DogCollectionViewCellClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogCollectionViewCellClass.swift; sourceTree = "<group>"; };
+		3E4D10C82302A0B900403C57 /* DogCollectionViewCellClass.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogCollectionViewCellClass.xib; sourceTree = "<group>"; };
+		3E4D10CB2302A6D900403C57 /* Dogs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dogs.plist; sourceTree = "<group>"; };
+		3E4D10DD23034D9500403C57 /* alldogsresponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = alldogsresponse.json; path = ../../../../Downloads/alldogsresponse.json; sourceTree = "<group>"; };
 		3E5CC4B022FDA15B00FE0099 /* DogImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageTableViewCell.swift; sourceTree = "<group>"; };
 		3E5CC4B122FDA15B00FE0099 /* DogImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogImageTableViewCell.xib; sourceTree = "<group>"; };
 		3E5CC4B422FDA6B400FE0099 /* TableDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDogViewController.swift; sourceTree = "<group>"; };
@@ -108,8 +117,6 @@
 			children = (
 				3E17B8DB22F9CE650072EBFF /* DogRepository.swift */,
 				3E17B8EE22FB095B0072EBFF /* BreedsRepository.swift */,
-				3E5CC4B622FEF17100FE0099 /* CollectionViewCell.swift */,
-				3E5CC4B722FEF17100FE0099 /* CollectionViewCell.xib */,
 			);
 			path = DogRepository;
 			sourceTree = "<group>";
@@ -117,10 +124,23 @@
 		3E17B8ED22FB03AA0072EBFF /* model */ = {
 			isa = PBXGroup;
 			children = (
-				3E17B8E722FAFD070072EBFF /* Dog.swift */,
+				3E17B8E722FAFD070072EBFF /* Doggye.swift */,
 				3E5CC4BC22FEFFE700FE0099 /* LabelStruct.swift */,
 			);
 			path = model;
+			sourceTree = "<group>";
+		};
+		3E4D10B82302984200403C57 /* collectionViewDogs */ = {
+			isa = PBXGroup;
+			children = (
+				3E4D10BE2302992800403C57 /* PinterestLayout.swift */,
+				3E4D10BC230298DB00403C57 /* ViewControllerCollections.swift */,
+				3E4D10C72302A0B900403C57 /* DogCollectionViewCellClass.swift */,
+				3E4D10C82302A0B900403C57 /* DogCollectionViewCellClass.xib */,
+				3E4D10BA230298A300403C57 /* Dog.swift */,
+				3E4D10C02302996900403C57 /* Dogs.xcassets */,
+			);
+			path = collectionViewDogs;
 			sourceTree = "<group>";
 		};
 		3E5CC4AF22FDA0D000FE0099 /* tableViewDog */ = {
@@ -160,23 +180,25 @@
 		F61DD2AE22F3926700B31D4A /* Doggoh-Starter */ = {
 			isa = PBXGroup;
 			children = (
+				3E4D10DD23034D9500403C57 /* alldogsresponse.json */,
 				F6693CCC22F4973600CD3720 /* Resources */,
 				F61DD2AF22F3926700B31D4A /* AppDelegate.swift */,
-				3E17B8E922FAFEAA0072EBFF /* alldogsresponse.json */,
 				3E17B8E522FAFC8F0072EBFF /* dogs.xcassets */,
 				3E17B8E022FAF7420072EBFF /* Property List.plist */,
 				3E5CC4AF22FDA0D000FE0099 /* tableViewDog */,
+				3E4D10B82302984200403C57 /* collectionViewDogs */,
 				3E17B8ED22FB03AA0072EBFF /* model */,
 				F61DD2C122F392B600B31D4A /* dog_questions_multiple.json */,
-				F61DD2B122F3926700B31D4A /* ViewController.swift */,
+				3E4D10CB2302A6D900403C57 /* Dogs.plist */,
 				3E17B8DD22FAECB40072EBFF /* DogsViewController.swift */,
 				F61DD2B322F3926700B31D4A /* Main.storyboard */,
 				3E17B8F622FC730E0072EBFF /* CustomTableViewCell.swift */,
 				3E17B8F722FC730E0072EBFF /* CustomTableViewCell.xib */,
 				3E17B8F022FC61940072EBFF /* TableViewCell.swift */,
 				3E17B8F122FC61940072EBFF /* TableViewCell.xib */,
-				3E5CC46322FCB27F00FE0099 /* NoImageTableViewCell.swift */,
-				3E5CC46422FCB27F00FE0099 /* NoImageTableViewCell.xib */,
+				3E5CC4B622FEF17100FE0099 /* CollectionViewCell.swift */,
+				3E5CC4B722FEF17100FE0099 /* CollectionViewCell.xib */,
+				F61DD2B122F3926700B31D4A /* ViewController.swift */,
 				F61DD2B622F3926900B31D4A /* Assets.xcassets */,
 				F61DD2B822F3926900B31D4A /* LaunchScreen.storyboard */,
 				F61DD2BB22F3926900B31D4A /* Info.plist */,
@@ -274,8 +296,8 @@
 			files = (
 				3E19400E22F9998C00E79A74 /* Montserrat-Regular.ttf in Resources */,
 				3E17B8F322FC61940072EBFF /* TableViewCell.xib in Resources */,
+				3E4D10CA2302A0B900403C57 /* DogCollectionViewCellClass.xib in Resources */,
 				3E19401322F9999C00E79A74 /* OpenSans-ExtraBold.ttf in Resources */,
-				3E17B8EA22FAFEAB0072EBFF /* alldogsresponse.json in Resources */,
 				3E19401622F999A300E79A74 /* OpenSans-Light.ttf in Resources */,
 				3E19400D22F9998500E79A74 /* Montserrat-Bold.ttf in Resources */,
 				3E19401022F9999400E79A74 /* MontserratAlternates-Regular.ttf in Resources */,
@@ -285,7 +307,6 @@
 				3E19401822F999AC00E79A74 /* OpenSans-Regular.ttf in Resources */,
 				F61DD2BA22F3926900B31D4A /* LaunchScreen.storyboard in Resources */,
 				3E19401222F9999900E79A74 /* OpenSans-BoldItalic.ttf in Resources */,
-				3E5CC46622FCB27F00FE0099 /* NoImageTableViewCell.xib in Resources */,
 				F61DD2B722F3926900B31D4A /* Assets.xcassets in Resources */,
 				3E17B8E122FAF7420072EBFF /* Property List.plist in Resources */,
 				3E19401A22F999B200E79A74 /* OpenSans-SemiboldItalic.ttf in Resources */,
@@ -293,11 +314,13 @@
 				3E5CC4B922FEF17100FE0099 /* CollectionViewCell.xib in Resources */,
 				3E19401122F9999700E79A74 /* OpenSans-Bold.ttf in Resources */,
 				F61DD2C222F392B600B31D4A /* dog_questions_multiple.json in Resources */,
+				3E4D10CC2302A6D900403C57 /* Dogs.plist in Resources */,
 				3E19400F22F9999200E79A74 /* MontserratAlternates-Bold.ttf in Resources */,
 				3E17B8F922FC730E0072EBFF /* CustomTableViewCell.xib in Resources */,
 				F61DD2B522F3926700B31D4A /* Main.storyboard in Resources */,
 				3E19401722F999AA00E79A74 /* OpenSans-LightItalic.ttf in Resources */,
 				3E19401922F999AF00E79A74 /* OpenSans-Semibold.ttf in Resources */,
+				3E4D10DE23034D9500403C57 /* alldogsresponse.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -309,16 +332,19 @@
 			buildActionMask = 2147483647;
 			files = (
 				3E5CC4B222FDA15B00FE0099 /* DogImageTableViewCell.swift in Sources */,
-				3E17B8E822FAFD070072EBFF /* Dog.swift in Sources */,
+				3E17B8E822FAFD070072EBFF /* Doggye.swift in Sources */,
 				3E5CC4B822FEF17100FE0099 /* CollectionViewCell.swift in Sources */,
 				F61DD2B222F3926700B31D4A /* ViewController.swift in Sources */,
-				3E5CC46522FCB27F00FE0099 /* NoImageTableViewCell.swift in Sources */,
+				3E4D10BD230298DB00403C57 /* ViewControllerCollections.swift in Sources */,
 				3E17B8F822FC730E0072EBFF /* CustomTableViewCell.swift in Sources */,
 				3E17B8DC22F9CE650072EBFF /* DogRepository.swift in Sources */,
+				3E4D10C92302A0B900403C57 /* DogCollectionViewCellClass.swift in Sources */,
 				F61DD2B022F3926700B31D4A /* AppDelegate.swift in Sources */,
 				3E5CC4B522FDA6B400FE0099 /* TableDogViewController.swift in Sources */,
 				3E17B8EF22FB095B0072EBFF /* BreedsRepository.swift in Sources */,
 				3E17B8F222FC61940072EBFF /* TableViewCell.swift in Sources */,
+				3E4D10BB230298A300403C57 /* Dog.swift in Sources */,
+				3E4D10BF2302992800403C57 /* PinterestLayout.swift in Sources */,
 				3E5CC4BD22FEFFE700FE0099 /* LabelStruct.swift in Sources */,
 				3E17B8DE22FAECB40072EBFF /* DogsViewController.swift in Sources */,
 			);
