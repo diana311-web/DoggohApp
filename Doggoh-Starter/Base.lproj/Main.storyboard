@@ -26,31 +26,171 @@
             <objects>
                 <viewController id="K3Y-eF-c5l" customClass="DogsViewController" customModule="Doggoh_Starter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J5I-hM-oX5">
-                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="KKb-pr-eKk">
-                                <rect key="frame" x="0.0" y="44" width="414" height="769"/>
+                                <rect key="frame" x="0.0" y="80" width="414" height="645"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             </tableView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="DOGGOH" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Oyj-vM-tFf">
+                                <rect key="frame" x="145" y="11" width="86" height="25"/>
+                                <fontDescription key="fontDescription" name="Avenir-Black" family="Avenir" pointSize="18"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="Oyj-vM-tFf" firstAttribute="top" secondItem="smm-zS-E2j" secondAttribute="top" constant="11" id="5Bh-XH-c8S"/>
                             <constraint firstItem="KKb-pr-eKk" firstAttribute="leading" secondItem="smm-zS-E2j" secondAttribute="leading" id="7UV-Rf-XrJ"/>
                             <constraint firstItem="smm-zS-E2j" firstAttribute="trailing" secondItem="KKb-pr-eKk" secondAttribute="trailing" id="GxQ-n4-t58"/>
-                            <constraint firstItem="KKb-pr-eKk" firstAttribute="top" secondItem="smm-zS-E2j" secondAttribute="top" id="JZl-k4-5L4"/>
+                            <constraint firstItem="KKb-pr-eKk" firstAttribute="top" secondItem="smm-zS-E2j" secondAttribute="top" constant="80" id="JZl-k4-5L4"/>
                             <constraint firstItem="smm-zS-E2j" firstAttribute="bottom" secondItem="KKb-pr-eKk" secondAttribute="bottom" id="KuX-7C-i4A"/>
+                            <constraint firstItem="Oyj-vM-tFf" firstAttribute="leading" secondItem="smm-zS-E2j" secondAttribute="leading" constant="145" id="eIj-ft-RBP"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="smm-zS-E2j"/>
                     </view>
-                    <tabBarItem key="tabBarItem" title="" image="shape" id="w3o-8G-9qv"/>
+                    <navigationItem key="navigationItem" id="jiU-cd-EYd"/>
                     <connections>
                         <outlet property="tableView" destination="KKb-pr-eKk" id="jwT-ov-ZTd"/>
+                        <segue destination="Ilu-OM-kSb" kind="push" identifier="tranzitie" id="ssv-7L-DbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abO-LY-qUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1675.3623188405797" y="-58.258928571428569"/>
+            <point key="canvasLocation" x="-1068.1159420289855" y="-58.258928571428569"/>
+        </scene>
+        <!--Detail Image View Controller-->
+        <scene sceneID="g2S-wL-YeL">
+            <objects>
+                <viewController storyboardIdentifier="DetailImageVC" id="Ilu-OM-kSb" customClass="DetailImageViewController" customModule="Doggoh_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="KUf-yA-CoG">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="1112"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" horizontalCompressionResistancePriority="751" translatesAutoresizingMaskIntoConstraints="NO" id="bpt-od-EpD">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="1029"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="OyT-9I-7cb">
+                                        <rect key="frame" x="0.0" y="0.0" width="0.0" height="1029"/>
+                                        <subviews>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="M9k-te-MDk">
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="344"/>
+                                                <color key="backgroundColor" red="0.59956329320000001" green="0.069730435960000003" blue="0.42170301599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="344" id="6zr-FW-eII"/>
+                                                </constraints>
+                                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="CtQ-V6-S3a">
+                                                    <size key="itemSize" width="50" height="50"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells/>
+                                            </collectionView>
+                                            <pageControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" numberOfPages="4" translatesAutoresizingMaskIntoConstraints="NO" id="0wr-Mv-hss">
+                                                <rect key="frame" x="179" y="360" width="55" height="37"/>
+                                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <color key="tintColor" red="0.59956329320000001" green="0.069730435960000003" blue="0.42170301599999999" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="pageIndicatorTintColor" red="0.89829039570000002" green="0.90163081879999996" blue="0.92549359799999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                                <color key="currentPageIndicatorTintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                            </pageControl>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Some info on Amstaffs" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuP-Yv-i5O">
+                                                <rect key="frame" x="35" y="400" width="182" height="23"/>
+                                                <fontDescription key="fontDescription" name="MalayalamSangamMN" family="Malayalam Sangam MN" pointSize="19"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <stackView opaque="NO" contentMode="scaleAspectFill" axis="vertical" distribution="equalSpacing" alignment="top" spacing="20" translatesAutoresizingMaskIntoConstraints="NO" id="WC2-Nu-LDG">
+                                                <rect key="frame" x="35" y="430" width="344" height="599"/>
+                                                <subviews>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDm-nM-lAi">
+                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confident, smart and good-natured." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbQ-yr-rpv">
+                                                        <rect key="frame" x="0.0" y="70" width="209.5" height="18"/>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height and Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWY-xE-lXS">
+                                                        <rect key="frame" x="0.0" y="140.5" width="133.5" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zk-et-D9X">
+                                                        <rect key="frame" x="0.0" y="210.5" width="160" height="35.5"/>
+                                                        <string key="text">Male : 18-19 in, 55-70 lbs
+Female : 17-18 in, 40-55 lbs</string>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsz-g4-i9X">
+                                                        <rect key="frame" x="0.0" y="298.5" width="44" height="17.5"/>
+                                                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n35-n0-qF6">
+                                                        <rect key="frame" x="0.0" y="368.5" width="344" height="230.5"/>
+                                                        <mutableString key="text">AmStaffs are stocky, muscular bull-type terriers standing 17 to 19 inches at the shoulder. The head is broad, the jaws well defined, the cheekbones pronounced, and the dark, round eyes are set wide apart. AmStaff movement is agile and graceful, with a springy gait that advertises the breed’s innate confidence. The stiff, glossy coat comes in many colors and patterns. AmStaffers describe their dogs as keenly aware of their surroundings, game for anything, and lovable “personality dogs” around the house. AmStaffs like mental and physical challenges. They are highly trainable, as their many forays into showbiz suggest. When acquiring an AmStaff, there’s only one way to go: Do your homework and find a responsible AKC breeder.</mutableString>
+                                                        <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                </subviews>
+                                            </stackView>
+                                        </subviews>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstItem="WC2-Nu-LDG" firstAttribute="top" secondItem="OyT-9I-7cb" secondAttribute="top" constant="430" id="6du-zZ-i8N"/>
+                                            <constraint firstAttribute="bottom" secondItem="WC2-Nu-LDG" secondAttribute="bottom" id="8B5-Am-wUg"/>
+                                            <constraint firstItem="EuP-Yv-i5O" firstAttribute="top" secondItem="M9k-te-MDk" secondAttribute="bottom" constant="56" id="JoE-BL-B9H"/>
+                                            <constraint firstItem="EuP-Yv-i5O" firstAttribute="leading" secondItem="OyT-9I-7cb" secondAttribute="leading" constant="35" id="OC0-Ef-mtw"/>
+                                            <constraint firstItem="M9k-te-MDk" firstAttribute="top" secondItem="OyT-9I-7cb" secondAttribute="top" id="OiC-BZ-w8Y"/>
+                                            <constraint firstItem="0wr-Mv-hss" firstAttribute="top" secondItem="M9k-te-MDk" secondAttribute="bottom" constant="16" id="Y54-1V-7Pc"/>
+                                            <constraint firstItem="0wr-Mv-hss" firstAttribute="leading" secondItem="OyT-9I-7cb" secondAttribute="leading" constant="179" id="bsZ-gb-jY2"/>
+                                            <constraint firstAttribute="trailing" secondItem="WC2-Nu-LDG" secondAttribute="trailing" constant="35" id="kAp-3i-zl1"/>
+                                            <constraint firstItem="WC2-Nu-LDG" firstAttribute="leading" secondItem="OyT-9I-7cb" secondAttribute="leading" constant="35" id="kei-9e-A7L"/>
+                                            <constraint firstItem="M9k-te-MDk" firstAttribute="leading" secondItem="OyT-9I-7cb" secondAttribute="leading" id="ndQ-g0-GuX"/>
+                                            <constraint firstAttribute="trailing" secondItem="M9k-te-MDk" secondAttribute="trailing" id="wAZ-uf-1hW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstItem="OyT-9I-7cb" firstAttribute="width" secondItem="bpt-od-EpD" secondAttribute="width" id="8OO-HM-Ikw"/>
+                                    <constraint firstItem="OyT-9I-7cb" firstAttribute="leading" secondItem="bpt-od-EpD" secondAttribute="leading" id="JOE-cB-mlA"/>
+                                    <constraint firstAttribute="bottom" secondItem="OyT-9I-7cb" secondAttribute="bottom" id="Q36-0M-N9Q"/>
+                                    <constraint firstItem="OyT-9I-7cb" firstAttribute="height" secondItem="bpt-od-EpD" secondAttribute="height" priority="250" id="exU-27-TbU"/>
+                                    <constraint firstItem="OyT-9I-7cb" firstAttribute="top" secondItem="bpt-od-EpD" secondAttribute="top" id="lmC-aA-Ewo"/>
+                                    <constraint firstAttribute="trailing" secondItem="OyT-9I-7cb" secondAttribute="trailing" id="vcP-P5-A6T"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="bpt-od-EpD" firstAttribute="bottom" secondItem="V1B-JC-NXT" secondAttribute="bottom" id="Z0E-Dl-qWp"/>
+                            <constraint firstItem="bpt-od-EpD" firstAttribute="top" secondItem="V1B-JC-NXT" secondAttribute="top" id="hl3-6s-AfT"/>
+                            <constraint firstItem="bpt-od-EpD" firstAttribute="leading" secondItem="V1B-JC-NXT" secondAttribute="leading" id="msl-ek-SDD"/>
+                            <constraint firstItem="V1B-JC-NXT" firstAttribute="trailing" secondItem="bpt-od-EpD" secondAttribute="trailing" id="vv4-I2-7qz"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="V1B-JC-NXT"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="7TX-n1-I6R"/>
+                    <size key="freeformSize" width="414" height="1200"/>
+                    <connections>
+                        <outlet property="ImageDogsCollections" destination="M9k-te-MDk" id="w3G-ds-0e5"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="LsS-NE-Q9X" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2.8985507246376816" y="-85.044642857142847"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="B82-c0-RFs">
@@ -131,7 +271,7 @@
                     </tabBar>
                     <connections>
                         <segue destination="vso-W4-jjt" kind="relationship" relationship="viewControllers" id="aPl-rw-Pgc"/>
-                        <segue destination="K3Y-eF-c5l" kind="relationship" relationship="viewControllers" id="oEa-2a-dvZ"/>
+                        <segue destination="pKJ-sy-BJt" kind="relationship" relationship="viewControllers" id="oEa-2a-dvZ"/>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="viewControllers" id="i6D-Hz-xI9"/>
                         <segue destination="Reu-iD-l7a" kind="relationship" relationship="viewControllers" id="jWi-LL-e33"/>
                     </connections>
@@ -950,6 +1090,25 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="T7H-d6-czz" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-2725" y="-745"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="kYI-NI-reZ">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="pKJ-sy-BJt" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="" image="shape" id="w3o-8G-9qv"/>
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="eMJ-U6-3wl">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="K3Y-eF-c5l" kind="relationship" relationship="rootViewController" id="8Dj-IZ-YFs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FwI-Nx-KQA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1978.2608695652175" y="-58.258928571428569"/>
         </scene>
     </scenes>
     <resources>

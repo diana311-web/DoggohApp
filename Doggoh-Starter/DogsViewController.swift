@@ -17,17 +17,18 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     var dogsArray = [Doggye]()
     var dogs : [String:[String]] = [:]
     var dogsBread=[String]()
+    var pozaIndex = String("0")
     
     override func viewDidLoad() {
         tableView.rowHeight = 70
         tableView.register(UINib(nibName: "TableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "dogIdentifier")
         tableView.register(UINib(nibName: "CustomTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "CustomTableViewCell")
-        tableView.register(UINib(nibName: "NoImageTableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "noImageTableViewCell")
+        
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
         navigationController?.navigationBar.prefersLargeTitles = true
-        
+        navigationController?.isNavigationBarHidden = true
         //  print (dogs)
         if let json = BreedsRepository.dataFromJSON(withName: BreedsRepository.statementsFilename) {
             
@@ -44,7 +45,11 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
        dogsArray.sort{ $0.breed < $1.breed }
             
     }
+        
 }
+    override func viewWillAppear(_ animated: Bool) {
+          navigationController?.isNavigationBarHidden = true
+    }
     func numberOfSections(in tableView: UITableView) -> Int {
         return dogsArray.count
     }
@@ -59,12 +64,13 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
             return 1
         }
     }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         if dogsArray[indexPath.section].subBreeds?.count == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-            cell.config(dogsArray[indexPath.section].breed, String(Int.random(in: 0..<23)))
+            cell.config(dogsArray[indexPath.section].breed,String(indexPath.section%23))
+                
+      //      print ("index:",dogsArray[indexPath.section].breed.count)
             cell.separatorInset = UIEdgeInsets(top: 0, left: 89, bottom: 0, right:0)
             return cell
             
@@ -73,11 +79,9 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
             let cell = tableView.dequeueReusableCell(withIdentifier: "dogIdentifier", for: indexPath) as! TableViewCell
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
             
-            cell.config(dogsArray[indexPath.section].subBreeds![indexPath.row] ,  String(Int.random(in: 0..<23)))
+            cell.config(dogsArray[indexPath.section].subBreeds![indexPath.row] ,  "\(indexPath.row%23)")
             
             return cell
-            
-            
         }
         
     }
@@ -113,13 +117,28 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         return UIView(frame: CGRect.zero)
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        
         if dogsArray[indexPath.section].subBreeds?.count == 0{
             print (dogsArray[indexPath.section].breed.uppercased())
+              performSegue(withIdentifier: "tranzitie", sender: dogsArray[indexPath.section].breed)
+            
         }
         else {
             print ( dogsArray[indexPath.section].subBreeds![indexPath.row] )
+              performSegue(withIdentifier: "tranzitie", sender:  dogsArray[indexPath.section].subBreeds![indexPath.row] )
         }
+          pozaIndex = String(indexPath.section%23)
+        tableView.deselectRow(at: indexPath, animated: true)
+  //      pozaIndex = "\(indexPath.row%5)"
         
     }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        let infoTableVC = segue.destination as!  DetailImageViewController
+        infoTableVC.dogName = sender as? String
+        print ("pozaIndex", pozaIndex)
+        infoTableVC.imgNumber = pozaIndex
+        }
 }
 

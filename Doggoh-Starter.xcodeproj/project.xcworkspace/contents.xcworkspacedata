@@ -2,6 +2,18 @@
 <Workspace
    version = "1.0">
    <FileRef
+      location = "group:../DetailCollectionViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:../DetailCollectionViewCell.xib">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/elenagaman/Desktop/doggoh-bun/Doggoh-Starter/Doggoh-Starter/DetailImageViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:/Users/elenagaman/Desktop/doggoh-bun/Doggoh-Starter/Doggoh-Starter/DetailImageViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:alldogsresponse.json">
    </FileRef>
    <FileRef

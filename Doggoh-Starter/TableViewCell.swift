@@ -12,7 +12,6 @@ class TableViewCell: UITableViewCell {
 
     @IBOutlet weak var imagedog: UIImageView!
     @IBOutlet weak var labelName: UILabel!
-    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -24,4 +23,5 @@ class TableViewCell: UITableViewCell {
         labelName.text =  dog
         
     }
+  
 }

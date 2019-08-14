@@ -38,6 +38,9 @@
 		3E4D10CA2302A0B900403C57 /* DogCollectionViewCellClass.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D10C82302A0B900403C57 /* DogCollectionViewCellClass.xib */; };
 		3E4D10CC2302A6D900403C57 /* Dogs.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D10CB2302A6D900403C57 /* Dogs.plist */; };
 		3E4D10DE23034D9500403C57 /* alldogsresponse.json in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D10DD23034D9500403C57 /* alldogsresponse.json */; };
+		3E4D10E22303EEE900403C57 /* DetailImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10E12303EEE800403C57 /* DetailImageViewController.swift */; };
+		3E4D10E62304026D00403C57 /* DetailCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E4D10E42304026D00403C57 /* DetailCollectionViewCell.swift */; };
+		3E4D10E72304026D00403C57 /* DetailCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E4D10E52304026D00403C57 /* DetailCollectionViewCell.xib */; };
 		3E5CC4B222FDA15B00FE0099 /* DogImageTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B022FDA15B00FE0099 /* DogImageTableViewCell.swift */; };
 		3E5CC4B322FDA15B00FE0099 /* DogImageTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B122FDA15B00FE0099 /* DogImageTableViewCell.xib */; };
 		3E5CC4B522FDA6B400FE0099 /* TableDogViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3E5CC4B422FDA6B400FE0099 /* TableDogViewController.swift */; };
@@ -71,6 +74,9 @@
 		3E4D10C82302A0B900403C57 /* DogCollectionViewCellClass.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogCollectionViewCellClass.xib; sourceTree = "<group>"; };
 		3E4D10CB2302A6D900403C57 /* Dogs.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Dogs.plist; sourceTree = "<group>"; };
 		3E4D10DD23034D9500403C57 /* alldogsresponse.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = alldogsresponse.json; path = ../../../../Downloads/alldogsresponse.json; sourceTree = "<group>"; };
+		3E4D10E12303EEE800403C57 /* DetailImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = DetailImageViewController.swift; path = "/Users/elenagaman/Desktop/doggoh-bun/Doggoh-Starter/Doggoh-Starter/DetailImageViewController.swift"; sourceTree = "<absolute>"; };
+		3E4D10E42304026D00403C57 /* DetailCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailCollectionViewCell.swift; sourceTree = "<group>"; };
+		3E4D10E52304026D00403C57 /* DetailCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailCollectionViewCell.xib; sourceTree = "<group>"; };
 		3E5CC4B022FDA15B00FE0099 /* DogImageTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DogImageTableViewCell.swift; sourceTree = "<group>"; };
 		3E5CC4B122FDA15B00FE0099 /* DogImageTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = DogImageTableViewCell.xib; sourceTree = "<group>"; };
 		3E5CC4B422FDA6B400FE0099 /* TableDogViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TableDogViewController.swift; sourceTree = "<group>"; };
@@ -143,6 +149,16 @@
 			path = collectionViewDogs;
 			sourceTree = "<group>";
 		};
+		3E4D10E32304022D00403C57 /* DetailImage */ = {
+			isa = PBXGroup;
+			children = (
+				3E4D10E42304026D00403C57 /* DetailCollectionViewCell.swift */,
+				3E4D10E52304026D00403C57 /* DetailCollectionViewCell.xib */,
+				3E4D10E12303EEE800403C57 /* DetailImageViewController.swift */,
+			);
+			path = DetailImage;
+			sourceTree = "<group>";
+		};
 		3E5CC4AF22FDA0D000FE0099 /* tableViewDog */ = {
 			isa = PBXGroup;
 			children = (
@@ -153,17 +169,9 @@
 			path = tableViewDog;
 			sourceTree = "<group>";
 		};
-		3E5CC4D72301505600FE0099 /* collectionPageDogs */ = {
-			isa = PBXGroup;
-			children = (
-			);
-			path = collectionPageDogs;
-			sourceTree = "<group>";
-		};
 		F61DD2A322F3926700B31D4A = {
 			isa = PBXGroup;
 			children = (
-				3E5CC4D72301505600FE0099 /* collectionPageDogs */,
 				F61DD2AE22F3926700B31D4A /* Doggoh-Starter */,
 				F61DD2AD22F3926700B31D4A /* Products */,
 			);
@@ -189,9 +197,10 @@
 				3E4D10B82302984200403C57 /* collectionViewDogs */,
 				3E17B8ED22FB03AA0072EBFF /* model */,
 				F61DD2C122F392B600B31D4A /* dog_questions_multiple.json */,
+				3E4D10E32304022D00403C57 /* DetailImage */,
 				3E4D10CB2302A6D900403C57 /* Dogs.plist */,
-				3E17B8DD22FAECB40072EBFF /* DogsViewController.swift */,
 				F61DD2B322F3926700B31D4A /* Main.storyboard */,
+				3E17B8DD22FAECB40072EBFF /* DogsViewController.swift */,
 				3E17B8F622FC730E0072EBFF /* CustomTableViewCell.swift */,
 				3E17B8F722FC730E0072EBFF /* CustomTableViewCell.xib */,
 				3E17B8F022FC61940072EBFF /* TableViewCell.swift */,
@@ -309,6 +318,7 @@
 				3E19401222F9999900E79A74 /* OpenSans-BoldItalic.ttf in Resources */,
 				F61DD2B722F3926900B31D4A /* Assets.xcassets in Resources */,
 				3E17B8E122FAF7420072EBFF /* Property List.plist in Resources */,
+				3E4D10E72304026D00403C57 /* DetailCollectionViewCell.xib in Resources */,
 				3E19401A22F999B200E79A74 /* OpenSans-SemiboldItalic.ttf in Resources */,
 				3E19401422F9999E00E79A74 /* OpenSans-ExtraBoldItalic.ttf in Resources */,
 				3E5CC4B922FEF17100FE0099 /* CollectionViewCell.xib in Resources */,
@@ -336,6 +346,7 @@
 				3E5CC4B822FEF17100FE0099 /* CollectionViewCell.swift in Sources */,
 				F61DD2B222F3926700B31D4A /* ViewController.swift in Sources */,
 				3E4D10BD230298DB00403C57 /* ViewControllerCollections.swift in Sources */,
+				3E4D10E22303EEE900403C57 /* DetailImageViewController.swift in Sources */,
 				3E17B8F822FC730E0072EBFF /* CustomTableViewCell.swift in Sources */,
 				3E17B8DC22F9CE650072EBFF /* DogRepository.swift in Sources */,
 				3E4D10C92302A0B900403C57 /* DogCollectionViewCellClass.swift in Sources */,
@@ -347,6 +358,7 @@
 				3E4D10BF2302992800403C57 /* PinterestLayout.swift in Sources */,
 				3E5CC4BD22FEFFE700FE0099 /* LabelStruct.swift in Sources */,
 				3E17B8DE22FAECB40072EBFF /* DogsViewController.swift in Sources */,
+				3E4D10E62304026D00403C57 /* DetailCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
