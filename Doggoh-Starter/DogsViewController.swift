@@ -11,13 +11,20 @@ import UIKit
 class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataSource{
     
     @IBOutlet var tableView: UITableView!
+    
+    let apiClient2 = DogAPI2Client.sharedInstance
     private var sectionTitles = [String]()
     let contactReuseIdentifier = "dog"
     var nrsection = 0
     var dogsArray = [Doggye]()
     var dogs : [String:[String]] = [:]
-    var dogsBread=[String]()
+    var dogsImage = [String : UIImage]()
+    var images = [UIImage]()
     var pozaIndex = String("0")
+    //-------------
+    var activityIndicator = UIActivityIndicatorView()
+    let apiClient = DogAPIClient.sharedInstance
+    //--------------
     
     override func viewDidLoad() {
         tableView.rowHeight = 70
@@ -29,26 +36,86 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         tableView.dataSource = self
         navigationController?.navigationBar.prefersLargeTitles = true
         navigationController?.isNavigationBarHidden = true
-        //  print (dogs)
-        if let json = BreedsRepository.dataFromJSON(withName: BreedsRepository.statementsFilename) {
-            
-            dogs = json["message"] as! [String : [String]]
-            
-            
-            dogs.forEach { (key, value) in
-                
-                let dog = Doggye(breed: key, subBreeds: value)
-                dogsArray.append(dog)
-                
-            }
+        configActivityIndicator()
+        testNetworkCalls()
         
-       dogsArray.sort{ $0.breed < $1.breed }
-            
+        
     }
+    var data = Data()
+    var imageView = UIImageView()
+    var nrSections = 0
+    public func testNetworkCalls() {
+        showActivityIndicatory()
         
-}
+        apiClient.getAllDogs { result in
+            switch result {
+            case .success(let allDogs):
+                self.dogsArray = allDogs
+                DispatchQueue.main.async {
+                    self.tableView.reloadData()
+                }
+            case .failure(let error):
+                print(error)
+            }
+            self.hideActivityIndicatory()
+        }
+        
+        
+        showActivityIndicatory()
+        apiClient.getRandomImage { result in
+            switch result {
+            case .success(let image):
+                print(image)
+                
+            case .failure(let error):
+                print(error)
+            }
+            self.hideActivityIndicatory()
+        }
+        
+        showActivityIndicatory()
+        //        apiClient.getRandomImage(withBreed: "malamute") { result in
+        //            switch result {
+        //            case .success(let image):
+        //                print(image)
+        //                let imageUrl = image.imageURL
+        //                do {
+        //                    self.data = try Data(contentsOf: URL(string: imageUrl)!)
+        //                    DispatchQueue.main.async {
+        //                        self.imageView.image = UIImage(data: self.data)
+        //                        self.tableView.reloadData()
+        //                    }
+        //                }
+        //                catch let error {
+        //                    print("error: \(error)")
+        //                }
+        //
+        //            case .failure(let error):
+        //                print(error)
+        //            }
+        //            self.hideActivityIndicatory()
+        //        }
+    }
+    
+    private func configActivityIndicator() {
+        activityIndicator.center = view.center
+        activityIndicator.hidesWhenStopped = true
+        activityIndicator.style = .gray
+        view.addSubview(activityIndicator)
+    }
+    
+    private func showActivityIndicatory() {
+        activityIndicator.startAnimating()
+    }
+    
+    private func hideActivityIndicatory() {
+        DispatchQueue.main.async {
+            self.activityIndicator.stopAnimating()
+        }
+    }
+    
     override func viewWillAppear(_ animated: Bool) {
-          navigationController?.isNavigationBarHidden = true
+        navigationController?.isNavigationBarHidden = true
     }
     func numberOfSections(in tableView: UITableView) -> Int {
         return dogsArray.count
@@ -64,27 +131,7 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
             return 1
         }
     }
-    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-        if dogsArray[indexPath.section].subBreeds?.count == 0{
-            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-            cell.config(dogsArray[indexPath.section].breed,String(indexPath.section%23))
-                
-      //      print ("index:",dogsArray[indexPath.section].breed.count)
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 89, bottom: 0, right:0)
-            return cell
-            
-        }
-        else {
-            let cell = tableView.dequeueReusableCell(withIdentifier: "dogIdentifier", for: indexPath) as! TableViewCell
-            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
-            
-            cell.config(dogsArray[indexPath.section].subBreeds![indexPath.row] ,  "\(indexPath.row%23)")
-            
-            return cell
-        }
-        
-    }
+    
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView?{
         
         
@@ -93,8 +140,8 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         sectionHeader.addSubview(titleLabel)
         
         if dogsArray[section].subBreeds?.count == 0{
-        
-          return UIView(frame: CGRect.zero)
+            
+            return UIView(frame: CGRect.zero)
             
         }
         else
@@ -120,16 +167,56 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         
         if dogsArray[indexPath.section].subBreeds?.count == 0{
             print (dogsArray[indexPath.section].breed.uppercased())
-              performSegue(withIdentifier: "tranzitie", sender: dogsArray[indexPath.section].breed)
+            performSegue(withIdentifier: "tranzitie", sender: dogsArray[indexPath.section].breed)
+            apiClient2.postTags(with:self.dogsImage[self.dogsArray[indexPath.section].breed]!){
+                result in
+                switch result{
+                case .success(let dogs):
+                    print(dogs)
+                    var ok = false
+                    for item in dogs{
+                        if item == self.dogsArray[indexPath.section].breed{
+                            print ("Rasa ",self.dogsArray[indexPath.section].breed ,"exista!")
+                            ok = true
+                            break
+                        }
+                    }
+                        if(ok == false){
+                              print ("Rasa ",self.dogsArray[indexPath.section].breed ," NU exista!")
+                        }
+                case .failure(let error):
+                    print (error)
+                }
+            }
             
         }
         else {
             print ( dogsArray[indexPath.section].subBreeds![indexPath.row] )
-              performSegue(withIdentifier: "tranzitie", sender:  dogsArray[indexPath.section].subBreeds![indexPath.row] )
+            performSegue(withIdentifier: "tranzitie", sender:  dogsArray[indexPath.section].subBreeds![indexPath.row] )
+            apiClient2.postTags(with:self.dogsImage[ self.dogsArray[indexPath.section].subBreeds![indexPath.row]]!){
+                result in
+                switch result{
+                case .success(let dogs):
+                    print(dogs)
+                    var ok = false
+                    for item in dogs{
+                        if item == self.dogsArray[indexPath.section].subBreeds![indexPath.row] {
+                            print ("Subrasa ",self.dogsArray[indexPath.section].subBreeds![indexPath.row] ,"exista!")
+                            ok = true
+                            break
+                        }
+                    }
+                    if(ok == false){
+                        print ("Subrasa ",self.dogsArray[indexPath.section].subBreeds![indexPath.row] ," NU exista!")
+                    }
+                case .failure(let error):
+                    print (error)
+                }
+            }
+            
         }
-          pozaIndex = String(indexPath.section%23)
+        pozaIndex = String(indexPath.section%23)
         tableView.deselectRow(at: indexPath, animated: true)
-  //      pozaIndex = "\(indexPath.row%5)"
         
     }
     
@@ -139,6 +226,85 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         infoTableVC.dogName = sender as? String
         print ("pozaIndex", pozaIndex)
         infoTableVC.imgNumber = pozaIndex
+    }
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        if dogsArray[indexPath.section].subBreeds?.count == 0{
+             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
+                apiClient.getRandomImage(withBreed: String(dogsArray[indexPath.section].breed)) { result in
+                    switch result {
+                    case .success(let image):
+                        print(image)
+                        let imageUrl = image.imageURL
+                    if self.dogsImage[self.dogsArray[indexPath.section].breed] == nil {
+                        do {
+                            let data = try Data(contentsOf: URL(string: imageUrl)!)
+                            DispatchQueue.main.sync {
+                                self.imageView.image = UIImage(data: data)
+                                //pastreaza in cache pt acest indexpath imaginea
+                                cell.config(self.dogsArray[indexPath.section].breed,self.imageView.image!)
+                                self.dogsImage [self.dogsArray[indexPath.section].breed] = self.imageView.image
+                            }
+                        }
+                        catch let error {
+                            print("error: \(error)")
+                        }
+                    }
+                    else {
+                        DispatchQueue.main.sync {
+                    cell.config(self.dogsArray[indexPath.section].breed,self.dogsImage[self.dogsArray[indexPath.section].breed]!)
+                             cell.separatorInset = UIEdgeInsets(top: 0, left: 89, bottom: 0, right:0)
+                        }
+                       
+                        }
+                    case .failure(let error):
+                        print(error)
+                    }
+                
+            }
+           
+            return cell
+    }
+        else
+        {
+            let cell = tableView.dequeueReusableCell(withIdentifier: "dogIdentifier", for: indexPath) as! TableViewCell
+            cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
+            
+           // cell.config(dogsArray[indexPath.section].subBreeds![indexPath.row] ,  "\(indexPath.row%23)")
+            
+            apiClient.getRandomImage(withBreed: String(dogsArray[indexPath.section].breed), withSubbreed:dogsArray[indexPath.section].subBreeds![indexPath.row] ) { result in
+                switch result {
+                case .success(let image):
+                    print(image)
+                    let imageUrl = image.imageURL
+                    if self.dogsImage[ self.dogsArray[indexPath.section].subBreeds![indexPath.row]] == nil {
+                        do {
+                            let data = try Data(contentsOf: URL(string: imageUrl)!)
+                            DispatchQueue.main.sync {
+                                self.imageView.image = UIImage(data: data)
+                                //pastreaza in cache pt acest indexpath imaginea
+                                cell.config(self.dogsArray[indexPath.section].subBreeds![indexPath.row],self.imageView.image!)
+                                self.dogsImage [self.dogsArray[indexPath.section].subBreeds![indexPath.row]] = self.imageView.image
+                            }
+                        }
+                        catch let error {
+                            print("error: \(error)")
+                        }
+                    }
+                    else {
+                        DispatchQueue.main.sync {
+                            cell.config(self.dogsArray[indexPath.section].subBreeds![indexPath.row],self.dogsImage[ self.dogsArray[indexPath.section].subBreeds![indexPath.row]]!)
+                            cell.separatorInset = UIEdgeInsets(top: 0, left: 89, bottom: 0, right:0)
+                        }
+                        
+                    }
+                case .failure(let error):
+                    print(error)
+                }
+                
+            }
+            
+            return cell
+            
         }
+    }
 }
-

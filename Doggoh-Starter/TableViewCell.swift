@@ -18,8 +18,8 @@ class TableViewCell: UITableViewCell {
     }
     //private var dog : Dog
     
-    func config(_ dog: String,_ image: String){
-        imagedog.image = UIImage(named: image)
+    func config(_ dog: String,_ image: UIImage){
+        imagedog.image = image
         labelName.text =  dog
         
     }

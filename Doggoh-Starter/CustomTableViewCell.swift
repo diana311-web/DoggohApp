@@ -17,9 +17,9 @@ class CustomTableViewCell: UITableViewCell {
         // Initialization code
     }
 
-    func config(_ dog: String,_ image: String){
+    func config(_ dog: String,_ image: UIImage){
         labelName.text =  dog.uppercased()
-        imageDog.image = UIImage(named: image)
+        imageDog.image = image
     }
     
 }

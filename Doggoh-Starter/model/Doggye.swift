@@ -10,4 +10,5 @@ import UIKit
 struct Doggye {
     var breed  : String
     var subBreeds : [String]?
+    
 }
