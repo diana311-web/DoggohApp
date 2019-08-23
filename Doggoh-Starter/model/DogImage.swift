@@ -16,3 +16,7 @@ struct DogImage: Codable {
         case status = "status"
     }
 }
+
+struct DogImagesReply:Codable{
+    let message: [String]
+}

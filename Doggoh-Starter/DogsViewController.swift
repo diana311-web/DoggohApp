@@ -14,8 +14,6 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     
     let apiClient2 = DogAPI2Client.sharedInstance
     private var sectionTitles = [String]()
-    let contactReuseIdentifier = "dog"
-    var nrsection = 0
     var dogsArray = [Doggye]()
     var dogs : [String:[String]] = [:]
     var dogsImage = [String : UIImage]()
@@ -25,7 +23,6 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     var activityIndicator = UIActivityIndicatorView()
     let apiClient = DogAPIClient.sharedInstance
     //--------------
-    
     override func viewDidLoad() {
         tableView.rowHeight = 70
         tableView.register(UINib(nibName: "TableViewCell", bundle: Bundle.main), forCellReuseIdentifier: "dogIdentifier")
@@ -38,15 +35,11 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         navigationController?.isNavigationBarHidden = true
         configActivityIndicator()
         testNetworkCalls()
-        
-        
     }
     var data = Data()
     var imageView = UIImageView()
-    var nrSections = 0
     public func testNetworkCalls() {
         showActivityIndicatory()
-        
         apiClient.getAllDogs { result in
             switch result {
             case .success(let allDogs):
@@ -59,8 +52,6 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
             }
             self.hideActivityIndicatory()
         }
-        
-        
         showActivityIndicatory()
         apiClient.getRandomImage { result in
             switch result {
@@ -74,27 +65,6 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
         }
         
         showActivityIndicatory()
-        //        apiClient.getRandomImage(withBreed: "malamute") { result in
-        //            switch result {
-        //            case .success(let image):
-        //                print(image)
-        //                let imageUrl = image.imageURL
-        //                do {
-        //                    self.data = try Data(contentsOf: URL(string: imageUrl)!)
-        //                    DispatchQueue.main.async {
-        //                        self.imageView.image = UIImage(data: self.data)
-        //                        self.tableView.reloadData()
-        //                    }
-        //                }
-        //                catch let error {
-        //                    print("error: \(error)")
-        //                }
-        //
-        //            case .failure(let error):
-        //                print(error)
-        //            }
-        //            self.hideActivityIndicatory()
-        //        }
     }
     
     private func configActivityIndicator() {
@@ -181,9 +151,9 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
                             break
                         }
                     }
-                        if(ok == false){
-                              print ("Rasa ",self.dogsArray[indexPath.section].breed ," NU exista!")
-                        }
+                    if(ok == false){
+                        print ("Rasa ",self.dogsArray[indexPath.section].breed ," NU exista!")
+                    }
                 case .failure(let error):
                     print (error)
                 }
@@ -229,18 +199,16 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
     }
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if dogsArray[indexPath.section].subBreeds?.count == 0{
-             let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
-                apiClient.getRandomImage(withBreed: String(dogsArray[indexPath.section].breed)) { result in
-                    switch result {
-                    case .success(let image):
-                        print(image)
-                        let imageUrl = image.imageURL
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CustomTableViewCell", for: indexPath) as! CustomTableViewCell
+            apiClient.getRandomImage(withBreed: String(dogsArray[indexPath.section].breed)) { result in
+                switch result {
+                case .success(let image):
+                    let imageUrl = image.imageURL
                     if self.dogsImage[self.dogsArray[indexPath.section].breed] == nil {
                         do {
                             let data = try Data(contentsOf: URL(string: imageUrl)!)
                             DispatchQueue.main.sync {
                                 self.imageView.image = UIImage(data: data)
-                                //pastreaza in cache pt acest indexpath imaginea
                                 cell.config(self.dogsArray[indexPath.section].breed,self.imageView.image!)
                                 self.dogsImage [self.dogsArray[indexPath.section].breed] = self.imageView.image
                             }
@@ -252,36 +220,32 @@ class DogsViewController: UIViewController, UITableViewDelegate,UITableViewDataS
                     else {
                         DispatchQueue.main.sync {
                     cell.config(self.dogsArray[indexPath.section].breed,self.dogsImage[self.dogsArray[indexPath.section].breed]!)
-                             cell.separatorInset = UIEdgeInsets(top: 0, left: 89, bottom: 0, right:0)
+                            cell.separatorInset = UIEdgeInsets(top: 0, left: 89, bottom: 0, right:0)
                         }
-                       
-                        }
-                    case .failure(let error):
-                        print(error)
+                        
                     }
+                case .failure(let error):
+                    print(error)
+                }
                 
             }
-           
+            
             return cell
-    }
+        }
         else
         {
             let cell = tableView.dequeueReusableCell(withIdentifier: "dogIdentifier", for: indexPath) as! TableViewCell
             cell.separatorInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: UIScreen.main.bounds.width)
             
-           // cell.config(dogsArray[indexPath.section].subBreeds![indexPath.row] ,  "\(indexPath.row%23)")
-            
             apiClient.getRandomImage(withBreed: String(dogsArray[indexPath.section].breed), withSubbreed:dogsArray[indexPath.section].subBreeds![indexPath.row] ) { result in
                 switch result {
                 case .success(let image):
-                    print(image)
                     let imageUrl = image.imageURL
                     if self.dogsImage[ self.dogsArray[indexPath.section].subBreeds![indexPath.row]] == nil {
                         do {
                             let data = try Data(contentsOf: URL(string: imageUrl)!)
                             DispatchQueue.main.sync {
                                 self.imageView.image = UIImage(data: data)
-                                //pastreaza in cache pt acest indexpath imaginea
                                 cell.config(self.dogsArray[indexPath.section].subBreeds![indexPath.row],self.imageView.image!)
                                 self.dogsImage [self.dogsArray[indexPath.section].subBreeds![indexPath.row]] = self.imageView.image
                             }

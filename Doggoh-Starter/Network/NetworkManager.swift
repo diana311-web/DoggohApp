@@ -10,8 +10,6 @@ import Foundation
 enum NetworkError: Error {
     case domainError
     case decodingError
-    
-    //add more error types if needed
 }
 
 class NetworkManager {

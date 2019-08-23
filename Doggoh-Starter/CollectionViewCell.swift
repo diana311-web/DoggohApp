@@ -15,9 +15,6 @@ class CollectionViewCell: UICollectionViewCell {
     // @IBOutlet weak var buttonCharachter: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
-//        contentView.layer.masksToBounds = true
-    //    contentView.layer.borderColor = UIColor.orange.cgColor
-//        contentView.layer.cornerRadius = 22
     }
     static var count = 0
     override var isSelected: Bool {
@@ -37,7 +34,6 @@ class CollectionViewCell: UICollectionViewCell {
             }
             if ( isSelected == false ) {
                 CollectionViewCell.count -= 1
-                //print(CollectionViewCell.count)
                 labelName.backgroundColor = #colorLiteral(red: 0.8974477649, green: 0.9018339515, blue: 0.9277464747, alpha: 1)
                 containerView.backgroundColor = #colorLiteral(red: 0.8974477649, green: 0.9018339515, blue: 0.9277464747, alpha: 1)
                 labelName.textColor = #colorLiteral(red: 0.7510237098, green: 0.7645222545, blue: 0.8163567185, alpha: 1)

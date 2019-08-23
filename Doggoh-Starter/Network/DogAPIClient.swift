@@ -7,9 +7,11 @@
 //
 
 import Foundation
+import UIKit
 enum DogAPI {
     case allDogs
     case randomImage
+    case randomImgaeNumber(nr: Int)
     case image(breed: String)
     case imageSubbreed(breed: String, subbreed: String)
 }
@@ -25,6 +27,8 @@ extension DogAPI {
             return "breed/\(breed)/images/random"
         case .imageSubbreed(let breed, let subbreed):
             return "breed/\(breed)/\(subbreed)/images/random"
+        case .randomImgaeNumber (let nr) :
+            return "breeds/image/random/\(nr)"
         }
     }
     
@@ -39,7 +43,6 @@ class DogAPIClient {
         self.baseURL = baseURL
     }
     
-   
     func getAllDogs(_ completion: @escaping (Result<[Doggye], NetworkError>) -> Void) {
         let url = URL(string: "\(baseURL)\(DogAPI.allDogs.endpoint)")!
         let networkManager = NetworkManager(url: url)
@@ -78,6 +81,31 @@ class DogAPIClient {
                 catch {
                     completion(.failure(.decodingError))
                 }
+            }
+        }
+    }
+    func getRandomImage(withNoImages nr : Int,_ completion: @escaping (Result<[UIImage], NetworkError>) -> Void) {
+        let url =  URL(string: "\(baseURL)\(DogAPI.randomImgaeNumber(nr: nr).endpoint)")!
+        print ("url",url)
+        let networkManager = NetworkManager(url: url)
+        networkManager.getJSON { result in
+            switch result {
+            case .failure(let error):
+                completion(.failure(error))
+            case .success(let data):
+                    do{
+                        let reply = try JSONDecoder().decode(DogImagesReply.self, from: data)
+                        var images = [UIImage]()
+                        for item in reply.message{
+                            let url = URL(string: item)!
+                            let data = try Data(contentsOf: URL(resolvingAliasFileAt: url))
+                            images.append(UIImage(data: data)!)
+                        }
+                        completion(.success(images))
+                    }
+                    catch {
+                        completion(.failure(.decodingError))
+                    }
             }
         }
     }
