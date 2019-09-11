@@ -5,6 +5,111 @@
       location = "group:Doggoh-Starter.xcodeproj">
    </FileRef>
    <FileRef
+      location = "group:DogDB.xcdatamodeld">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/alldogsresponse.json">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/AppDelegate.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Assets copy.xcassets">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Assets.xcassets">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Base.lproj">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/CollectionViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/CollectionViewCell.xib">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/collectionViewDogs">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/CustomTableViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/CustomTableViewCell.xib">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/DetailImage">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/DetailImageViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Dog copy.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/dog_questions_multiple.json">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/DogCollectionViewCell copy.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/DogCollectionViewCell copy.xib">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/dogs">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Dogs copy.plist">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Dogs copy.xcassets">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Dogs.plist">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/dogs.xcassets">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/DogsViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Info copy.plist">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Info.plist">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/model">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Network">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/PinterestLayout copy.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Property List.plist">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/Resources">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/TableViewCell.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/TableViewCell.xib">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/tableViewDog">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/ViewController copy.swift">
+   </FileRef>
+   <FileRef
+      location = "group:Doggoh-Starter/ViewController.swift">
+   </FileRef>
+   <FileRef
       location = "group:Pods/Pods.xcodeproj">
    </FileRef>
 </Workspace>

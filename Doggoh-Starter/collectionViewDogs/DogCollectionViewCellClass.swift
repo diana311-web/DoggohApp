@@ -21,7 +21,7 @@ class DogCollectionViewCellClass: UICollectionViewCell {
         }
     }
     
-    var dog: Dog! {
+    var dog: DogDataModel! {
         didSet {
             dogImageView.image = dog.image
             dogNameLabel.text = dog.name

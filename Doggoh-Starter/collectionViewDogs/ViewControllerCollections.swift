@@ -7,19 +7,21 @@
 //
 
 import UIKit
+import CoreData
+
 
 class ViewControllerCollections: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
     @IBOutlet weak var gradientView: UIView!
-    
-    var dogs = Dog.allDogs()
-    
+
+    var dogs = DogDataModel.allDogs()
+     var dogFR : Dog!
     let defaultSpace: CGFloat = 8
     let numberOfColumns: CGFloat = 2
-    
-    var selectedItems = [Dog]()
-    
+    var viewModel : ViewControllerCollectionsModel!
+    var selectedItems = [DogDataModel]()
+    let dogsModel = [DogDataModel]()
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -33,6 +35,10 @@ class ViewControllerCollections: UIViewController {
         if let layout = collectionView.collectionViewLayout as? PinterestLayout {
             layout.delegate = self
         }
+     // deleteAllData(entity: "Dog")
+        
+        viewModel = ViewControllerCollectionsModel(withDogs: dogs)
+        viewModel.addDogs()
     }
     
     
@@ -67,21 +73,12 @@ class ViewControllerCollections: UIViewController {
 
 extension ViewControllerCollections: PinterestLayoutDelegate {
     func collectionView(_ collectionView: UICollectionView, heightForPhotoAtIndexPath indexPath: IndexPath) -> CGFloat {
-        return dogs[indexPath.item].image.size.height
+      //  return dogs[indexPath.item].image.size.height
+        return viewModel.heightForPhoto(atIndex: indexPath.item)
     }
 }
 
 extension ViewControllerCollections: UICollectionViewDelegateFlowLayout {
-    
-    //Nu mai avem nevoie de aceasta metoda pentru ca deja calculam Size-ul pentru fiecare item in flow layout
-    
-    //    func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-    //
-    //        let width = (collectionView.frame.size.width - defaultSpace - collectionView.contentInset.left - collectionView.contentInset.right) / numberOfColumns
-    //        let height: CGFloat = 200
-    //
-    //        return CGSize(width: width, height: height)
-    //    }
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, minimumLineSpacingForSectionAt section: Int) -> CGFloat {
         return defaultSpace
@@ -92,12 +89,16 @@ extension ViewControllerCollections: UICollectionViewDelegateFlowLayout {
     }
     
     func collectionView(_ collectionView: UICollectionView, moveItemAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
-        let aux = dogs.remove(at: sourceIndexPath.item)
-        dogs.insert(aux, at: destinationIndexPath.item)
+      
+//        let aux = dogs.remove(at: sourceIndexPath.item)
+//        dogs.insert(aux, at: destinationIndexPath.item)
+    
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        let dog = dogs[indexPath.row]
+      //  let dog = dogs[indexPath.row]
+        let doggye = viewModel.fetchRC.object(at: indexPath)
+        let dog = DogDataModel(image: UIImage(data: doggye.image as! Data)!, name: doggye.name!)
         selectedItems.append(dog)
         print(selectedItems)
         print(indexPath.row)
@@ -120,20 +121,19 @@ extension ViewControllerCollections: UICollectionViewDelegateFlowLayout {
 extension ViewControllerCollections: UICollectionViewDataSource {
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        print ("count:", dogs.count)
-        return dogs.count
+        return viewModel.numberOfDogsInSection()
         
     }
-    
-        func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogCollectionViewCell", for: indexPath) as! DogCollectionViewCellClass
-         
-            let dog = dogs[indexPath.row]
-            cell.dog = dog
-            if(selectedItems.contains(dog)) {
-                cell.isSelected = true
-            }
-    
-            return cell
+
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "DogCollectionViewCell", for: indexPath) as! DogCollectionViewCellClass
+        let doggye = viewModel.fetchRC.object(at: indexPath)
+        let dog = DogDataModel(image: UIImage(data: doggye.image as! Data)!, name: doggye.name!)
+        cell.dog = dog
+        if(selectedItems.contains(cell.dog)) {
+            cell.isSelected = true
         }
+        
+        return cell
+    }
 }

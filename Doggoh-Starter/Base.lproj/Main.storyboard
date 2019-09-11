@@ -21,10 +21,10 @@
         </array>
     </customFonts>
     <scenes>
-        <!--Dogs View Controller-->
+        <!--Dogs New View Controller-->
         <scene sceneID="dip-Hy-tu4">
             <objects>
-                <viewController id="K3Y-eF-c5l" customClass="DogsViewController" customModule="Doggoh_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="K3Y-eF-c5l" customClass="DogsNewViewController" customModule="Doggoh_Starter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="J5I-hM-oX5">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="808"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -54,7 +54,7 @@
                     <navigationItem key="navigationItem" id="jiU-cd-EYd"/>
                     <connections>
                         <outlet property="tableView" destination="KKb-pr-eKk" id="jwT-ov-ZTd"/>
-                        <segue destination="Ilu-OM-kSb" kind="push" identifier="tranzitie" id="ssv-7L-DbC"/>
+                        <segue destination="Ilu-OM-kSb" kind="push" identifier="transition" id="ssv-7L-DbC"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="abO-LY-qUO" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -106,25 +106,25 @@
                                                 <rect key="frame" x="35" y="430" width="344" height="599"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Temperament" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KDm-nM-lAi">
-                                                        <rect key="frame" x="0.0" y="0.0" width="100.5" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="86" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Confident, smart and good-natured." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EbQ-yr-rpv">
-                                                        <rect key="frame" x="0.0" y="70" width="209.5" height="18"/>
+                                                        <rect key="frame" x="0.0" y="78" width="209.5" height="15.5"/>
                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Height and Weight" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="zWY-xE-lXS">
-                                                        <rect key="frame" x="0.0" y="140.5" width="133.5" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="154.5" width="115.5" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4Zk-et-D9X">
-                                                        <rect key="frame" x="0.0" y="210.5" width="160" height="35.5"/>
+                                                        <rect key="frame" x="0.0" y="232.5" width="163" height="30.5"/>
                                                         <string key="text">Male : 18-19 in, 55-70 lbs
 Female : 17-18 in, 40-55 lbs</string>
                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
@@ -132,13 +132,13 @@ Female : 17-18 in, 40-55 lbs</string>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="About" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bsz-g4-i9X">
-                                                        <rect key="frame" x="0.0" y="298.5" width="44" height="17.5"/>
+                                                        <rect key="frame" x="0.0" y="324" width="38" height="16.5"/>
                                                         <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="n35-n0-qF6">
-                                                        <rect key="frame" x="0.0" y="368.5" width="344" height="230.5"/>
+                                                        <rect key="frame" x="0.0" y="402" width="344" height="197"/>
                                                         <string key="text">AmStaffs are stocky, muscular bull-type terriers standing 17 to 19 inches at the shoulder. The head is broad, the jaws well defined, the cheekbones pronounced, and the dark, round eyes are set wide apart. AmStaff movement is agile and graceful, with a springy gait that advertises the breed’s innate confidence. The stiff, glossy coat comes in many colors and patterns. AmStaffers describe their dogs as keenly aware of their surroundings, game for anything, and lovable “personality dogs” around the house. AmStaffs like mental and physical challenges. They are highly trainable, as their many forays into showbiz suggest. When acquiring an AmStaff, there’s only one way to go: Do your homework and find a responsible AKC breeder.</string>
                                                         <fontDescription key="fontDescription" name="OpenSans-Light" family="Open Sans" pointSize="13"/>
                                                         <nil key="textColor"/>
@@ -193,10 +193,10 @@ Female : 17-18 in, 40-55 lbs</string>
             </objects>
             <point key="canvasLocation" x="2.8985507246376816" y="-85.044642857142847"/>
         </scene>
-        <!--View Controller-->
+        <!--Initial View Controller-->
         <scene sceneID="B82-c0-RFs">
             <objects>
-                <viewController id="Reu-iD-l7a" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="InitialVC" id="Reu-iD-l7a" customClass="InitialViewController" customModule="Doggoh_Starter" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="DJE-2m-Mmy">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -208,7 +208,7 @@ Female : 17-18 in, 40-55 lbs</string>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="QUIZZ" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RKT-qq-2Pd">
-                                <rect key="frame" x="20" y="159" width="523" height="195.5"/>
+                                <rect key="frame" x="20" y="159" width="474.5" height="186.5"/>
                                 <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="160"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
@@ -223,7 +223,7 @@ Female : 17-18 in, 40-55 lbs</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koR-TZ-tGo">
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="koR-TZ-tGo" customClass="StatementButton" customModule="Doggoh_Starter" customModuleProvider="target">
                                 <rect key="frame" x="30" y="561" width="175" height="50"/>
                                 <color key="backgroundColor" red="0.89087313413619995" green="0.46887761354446411" blue="0.29405826330184937" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                 <constraints>
@@ -239,6 +239,9 @@ Female : 17-18 in, 40-55 lbs</string>
                                         <integer key="value" value="22"/>
                                     </userDefinedRuntimeAttribute>
                                 </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="startQuiz:" destination="Reu-iD-l7a" eventType="touchUpInside" id="I5D-q3-s0J"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -256,10 +259,146 @@ Female : 17-18 in, 40-55 lbs</string>
                         <viewLayoutGuide key="safeArea" id="Dc5-Fk-W8T"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="" image="intrebare" id="hkg-Ue-WyR"/>
+                    <connections>
+                        <outlet property="startButton" destination="koR-TZ-tGo" id="DxV-Bt-s4i"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nIY-PJ-Jqo" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1675.3623188405797" y="681.69642857142856"/>
+        </scene>
+        <!--Statement View Controller-->
+        <scene sceneID="Ydi-CL-0AL">
+            <objects>
+                <viewController storyboardIdentifier="StatementVC" id="udG-5h-Z8A" customClass="StatementViewController" customModule="Doggoh_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="1mG-am-9CJ">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="SyB-Cl-JTJ">
+                                <rect key="frame" x="30" y="135" width="209" height="95.5"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="80"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="xZr-Ep-VwE">
+                                <rect key="frame" x="30" y="250.5" width="354" height="178.5"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-Light" family="Helvetica Neue" pointSize="24"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="WXX-KW-JS1" customClass="StatementButton" customModule="Doggoh_Starter" customModuleProvider="target">
+                                <rect key="frame" x="30" y="513" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="50"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                                <connections>
+                                    <action selector="optionClicked:" destination="udG-5h-Z8A" eventType="touchUpInside" id="tJn-W0-fXI"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hRX-Vw-cwr" customClass="StatementButton" customModule="Doggoh_Starter" customModuleProvider="target">
+                                <rect key="frame" x="30" y="605" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="optionClicked:" destination="udG-5h-Z8A" eventType="touchUpInside" id="csf-BT-6eJ"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5d7-4d-wFb" customClass="StatementButton" customModule="Doggoh_Starter" customModuleProvider="target">
+                                <rect key="frame" x="251" y="605" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="optionClicked:" destination="udG-5h-Z8A" eventType="touchUpInside" id="Bgs-E4-Jse"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="0by-Md-OPM" customClass="StatementButton" customModule="Doggoh_Starter" customModuleProvider="target">
+                                <rect key="frame" x="30" y="748" width="175" height="50"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="50" id="BMK-mX-raz"/>
+                                    <constraint firstAttribute="width" constant="175" id="slh-uC-PnJ"/>
+                                </constraints>
+                                <state key="normal" title="NEXT"/>
+                                <connections>
+                                    <action selector="nextBtnClicked:" destination="udG-5h-Z8A" eventType="touchUpInside" id="3lb-al-VHV"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cml-cB-GB3" customClass="StatementButton" customModule="Doggoh_Starter" customModuleProvider="target">
+                                <rect key="frame" x="251" y="513" width="46" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="optionClicked:" destination="udG-5h-Z8A" eventType="touchUpInside" id="Pzn-Kz-NFq"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="SyB-Cl-JTJ" firstAttribute="leading" secondItem="ORO-SR-Qa1" secondAttribute="leading" constant="30" id="4bu-AK-xE9"/>
+                            <constraint firstItem="xZr-Ep-VwE" firstAttribute="leading" secondItem="ORO-SR-Qa1" secondAttribute="leading" constant="30" id="8Af-GP-JyA"/>
+                            <constraint firstItem="SyB-Cl-JTJ" firstAttribute="top" secondItem="ORO-SR-Qa1" secondAttribute="top" constant="91" id="BPr-Bz-v6s"/>
+                            <constraint firstItem="ORO-SR-Qa1" firstAttribute="bottom" secondItem="xZr-Ep-VwE" secondAttribute="bottom" constant="433" id="I9W-qQ-7LC"/>
+                            <constraint firstItem="0by-Md-OPM" firstAttribute="top" secondItem="ORO-SR-Qa1" secondAttribute="top" constant="704" id="Itb-gC-Rp0"/>
+                            <constraint firstItem="xZr-Ep-VwE" firstAttribute="top" secondItem="SyB-Cl-JTJ" secondAttribute="bottom" constant="20" id="YOk-Jb-Jzz"/>
+                            <constraint firstItem="0by-Md-OPM" firstAttribute="leading" secondItem="ORO-SR-Qa1" secondAttribute="leading" constant="30" id="dfa-Dq-xT2"/>
+                            <constraint firstItem="ORO-SR-Qa1" firstAttribute="trailing" secondItem="xZr-Ep-VwE" secondAttribute="trailing" constant="30" id="l9e-mc-Emx"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="ORO-SR-Qa1"/>
+                    </view>
+                    <connections>
+                        <outlet property="nextQuestionBtn" destination="0by-Md-OPM" id="EcF-eE-25H"/>
+                        <outlet property="optionBtnA" destination="WXX-KW-JS1" id="gV3-tx-XdN"/>
+                        <outlet property="optionBtnB" destination="cml-cB-GB3" id="N64-Um-FWg"/>
+                        <outlet property="optionBtnC" destination="hRX-Vw-cwr" id="RkV-fh-dLs"/>
+                        <outlet property="optionBtnD" destination="5d7-4d-wFb" id="JqE-nb-ATf"/>
+                        <outlet property="progressLabel" destination="SyB-Cl-JTJ" id="FyU-yt-60u"/>
+                        <outlet property="questionLabel" destination="xZr-Ep-VwE" id="aol-78-VxR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="brw-Nk-KCO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-910.14492753623199" y="685.71428571428567"/>
+        </scene>
+        <!--Results View Controller-->
+        <scene sceneID="NWt-Wh-g7M">
+            <objects>
+                <viewController storyboardIdentifier="ResultsVC" id="qFh-bb-paR" customClass="ResultsViewController" customModule="Doggoh_Starter" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="iGl-7o-P6r">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="mtu-pt-okf">
+                                <rect key="frame" x="124" y="213" width="167" height="79"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zLx-nZ-WQg" customClass="StatementButton" customModule="Doggoh_Starter" customModuleProvider="target">
+                                <rect key="frame" x="103" y="578" width="88" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Retake quizz"/>
+                                <connections>
+                                    <action selector="resetQuiz:" destination="qFh-bb-paR" eventType="touchUpInside" id="EX5-wT-V0Z"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="CNb-hw-ucb"/>
+                    </view>
+                    <connections>
+                        <outlet property="congratsLabel" destination="mtu-pt-okf" id="y0e-Eg-YX2"/>
+                        <outlet property="resetButton" destination="zLx-nZ-WQg" id="PBX-c3-TjR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hkg-yV-AXl" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-97.101449275362327" y="685.71428571428567"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="zvg-tF-KGn">

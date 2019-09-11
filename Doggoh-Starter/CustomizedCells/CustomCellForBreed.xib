@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="CustomTableViewCell" rowHeight="86" id="KGk-i7-Jjw" customClass="CustomCellForBreed" customModule="Doggoh_Starter" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="298" height="86"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="298" height="85.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="mbO-jm-6fi">
+                        <rect key="frame" x="35" y="16" width="40" height="40"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="40" id="4UM-OH-7LU"/>
+                            <constraint firstAttribute="width" constant="40" id="Op1-wd-MjW"/>
+                        </constraints>
+                    </imageView>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r4V-9A-rnz">
+                        <rect key="frame" x="90" y="28" width="34.5" height="16.5"/>
+                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="14"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="mbO-jm-6fi" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="35" id="HXv-Ni-M5x"/>
+                    <constraint firstItem="r4V-9A-rnz" firstAttribute="centerY" secondItem="mbO-jm-6fi" secondAttribute="centerY" id="Pga-2F-PNn"/>
+                    <constraint firstItem="mbO-jm-6fi" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="16" id="Xyx-hR-B7U"/>
+                    <constraint firstItem="r4V-9A-rnz" firstAttribute="leading" secondItem="mbO-jm-6fi" secondAttribute="trailing" constant="15" id="adf-Ed-7vD"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="imageDog" destination="mbO-jm-6fi" id="hUc-al-ZNL"/>
+                <outlet property="labelName" destination="r4V-9A-rnz" id="ICz-tu-Asx"/>
+            </connections>
+            <point key="canvasLocation" x="248" y="129"/>
+        </tableViewCell>
+    </objects>
+</document>
